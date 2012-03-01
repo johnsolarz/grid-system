@@ -1,0 +1,175 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title></title>
+  <meta name="description" content="">
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <link rel="stylesheet" href="css/fluo-12.css">
+  
+<style>
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html, button, input, select, textarea { font: 100%/1.5 "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #222; } /* 16px, 24px */
+body { background: url("img/24px-grid-bg.gif") 0 1.1875em; margin: 0; font-size: 1em; line-height: 1.5; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+h1, h2, h3, h4, h5, h6 { font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #222; }
+h1 { margin: 0; font-size: 3.75em; line-height: 1.2em; margin-bottom: 0.4em; } /* 60px, 72px, 24px */
+h2 { margin: 0; font-size: 3em; line-height: 1em; margin-bottom: 0.5em; } /* 48px, 48px, 24px */
+h3 { margin: 0; font-size: 2.25em; line-height: 1.3333333333333333333333333333333em; margin-bottom: 0.6667em; } /* 36px, 48px, 24px */ 
+h4 { margin: 0; font-size: 1.5em; line-height: 1em; margin-bottom: 1em; } /* 24px, 24px, 24px */
+h5 { margin: 0; font-size: 1.3125em; line-height: 1.1428571428571428571428571428571em; margin-bottom: 1.1428571428571428571428571428571em; } /* 21px, 24px, 24px */
+h6 { margin: 0; font-size: 1.125em; line-height: 1.3333333333333333333333333333333em; margin-bottom: 1.3333333333333333333333333333333em; } /* 18px, 24px, 24px */
+p, dl, td, th, table, address { margin: 0; font-size: 1em; line-height: 1.5em; margin-bottom: 1.5em; padding: 0; } /* 16px, 24px, 24px */
+.center .column { background: rgba(220,220,220,.5); margin-bottom: 1.5em; text-align: center; }
+.left .column .inset { background: rgba(220,220,220,.5); margin-bottom: 1.5em; text-align: left; }
+  </style>
+</head>
+<body>
+
+  <header class="grid">
+  	<section class="twelve column">
+  		<h6>Fluogrid<sup>1.0</sup></h6>
+  	</section>
+  </header>
+  
+  <div class="grid center" role="main">
+		<div class="one column">
+			one
+		</div>
+		<div class="eleven column">
+			eleven
+		</div>
+		<div class="two column">
+			two
+		</div>
+		<div class="ten column">
+			ten
+		</div>
+		<div class="three column">
+			three
+		</div>
+		<div class="nine column">
+			nine
+		</div>
+		<div class="four column">
+			four
+		</div>
+		<div class="eight column">
+			eight
+		</div>
+		<div class="five column">
+			five
+		</div>
+		<div class="seven column">
+			seven
+		</div>
+		<div class="six column">
+			six
+		</div>
+		<div class="six column">
+			six
+		</div>
+		<div class="seven column">
+			seven
+		</div>
+		<div class="five column">
+			five
+		</div>
+		<div class="eight column">
+			eight
+		</div>
+		<div class="four column">
+			four
+		</div>
+		<div class="nine column">
+			nine
+		</div>
+		<div class="three column">
+			three
+		</div>
+		<div class="ten column">
+			ten
+		</div>
+		<div class="two column">
+			two
+		</div>
+		<div class="eleven column">
+			eleven
+		</div>
+		<div class="one column">
+			one
+		</div>
+  </div>
+  <div class="grid text">
+  	<div class="six column">
+		  <h1>Heading h1</h1>
+  		<h2>Heading h2</h2>
+	  	<h3>Heading h3</h3>
+ 	 		<h4>Heading h4</h4>
+		  <h5>Heading h5</h5>
+  		<h6>Heading h6</h6>
+		</div>
+	</div>
+	<div class="grid center">
+		<div class="twelve column">
+			<div class="eight column alpha">
+				eight alpha
+			</div>
+			<div class="four column omega">
+				four omega
+			</div>
+		</div>
+	</div>
+	<div class="grid center">
+		<div class="twelve column">
+			<div class="three column alpha">
+				three alpha
+			</div>
+			<div class="nine column omega">
+				three omega
+			</div>
+		</div>
+	</div>
+	<div class="grid center">
+		<div class="six column push-three">
+			six push three
+		</div>
+		<div class="three column pull-six">
+			three pull six 
+		</div>
+		<div class="three column">
+			three 
+		</div>
+	</div>
+	<div class="grid left">
+		<div class="four column">
+			<div class="inset">
+					Four inset 
+			</div>
+		</div>
+		<div class="four column">
+			<div class="inset">
+				Four inset
+			</div>
+		</div>
+		<div class="four column">
+			<div class="inset">
+				Four inset
+			</div>
+		</div>
+	</div>
+	
+  <footer class="grid">
+  	<div class="twelve column">
+			<p><small><a href="https://github.com/johnsolarz/fluogrid">https://github.com/johnsolarz/fluogrid</a></small></p>
+		</div>
+  </footer>
+
+</body>
+</html>

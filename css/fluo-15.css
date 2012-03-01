@@ -1,0 +1,298 @@
+/* 
+ * Fluo 15
+ * A simple, responsive fixed-width grid with a 15 unit preset.
+ * https://github.com/johnsolarz/fluogrid
+ * Copyright 2012 8/7 Central
+ */
+
+
+/* =============================================================================
+   The Grid System
+   ========================================================================== */
+
+/*
+ * 1. Grid defines the layout area. Modify widths inside media quieries as required.
+ * 2. Columns are made up of a number of units. Set gutter margins here.
+ * 3. Rows are horizontal divisions of similar content.
+ */
+
+.grid { margin: 0 auto; position: relative; }
+.column { display: inline; float: left; margin-left: 10px; margin-right: 10px; }
+.row { margin-bottom: 1.5em; }
+
+/* Nested columns */
+.alpha { margin-left: 0; }
+.omega { margin-right: 0; }
+
+/* Push pull columns */
+.push-one,    .pull-one,    .push-two,    .pull-two,
+.push-three,  .pull-three,  .push-four,   .pull-four,
+.push-five,   .pull-five,   .push-six,    .pull-six,
+.push-seven,  .pull-seven,  .push-eight,  .pull-eight,
+.push-nine,   .pull-nine,   .push-ten,    .pull-ten,
+.push-eleven, .pull-eleven, .push-twelve, .pull-twelve { position: relative; }
+
+/* Non-structural helper classes */
+.center { text-align: center; }
+.inset { padding: 1.5em; }
+.wide { width: 100%; }
+
+/* Micro clearfix hack */
+.grid:before, .grid:after, .row:before, .row:after { content: ""; display: table; }
+.grid:after, .row:after { clear: both; }
+.grid, .row { *zoom: 1; }
+
+
+/* =============================================================================
+   Primary ('mobile first') styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============================================================================
+   Mobile portrait
+   ========================================================================== */
+
+@media only screen and (max-width: 767px) {
+
+  /* One 300px column, no guters */
+	.grid                  { width: 300px; }
+	.column                { margin-left: 0; margin-right: 0; }
+
+	/* Units */
+	.grid .one,
+	.grid .two,
+	.grid .three,
+	.grid .four,
+	.grid .five,
+	.grid .six,
+	.grid .seven,
+	.grid .eight,
+	.grid .nine,
+	.grid .ten,
+	.grid .eleven,
+	.grid .twelve,
+	.grid .thirteen,
+	.grid .fourteen,
+	.grid .fifteen         { width: 300px; }
+
+}
+
+
+/* =============================================================================
+   Mobile landscape
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+  /* One 420px column, no gutters */
+	.grid                  { width: 420px; }
+	.column                { margin-left: 0; margin-right: 0; }
+
+	/* Units */
+	.grid .one,
+	.grid .two,
+	.grid .three,
+	.grid .four,
+	.grid .five,
+	.grid .six,
+	.grid .seven,
+	.grid .eight,
+	.grid .nine,
+	.grid .ten,
+	.grid .eleven,
+	.grid .twelve,
+	.grid .thirteen,
+	.grid .fourteen,
+	.grid .fifteen         { width: 420px; }
+
+}
+
+
+/* =============================================================================
+   Tablet
+   ========================================================================== */
+   
+@media only screen and (min-width: 768px) { 
+
+	/* Fifteen 28px units, 10px gutters */
+	.grid                  { width: 720px; }
+
+	/* Units */
+	.grid .one             { width: 28px;  }
+	.grid .two             { width: 76px;  }
+	.grid .three           { width: 124px; }
+	.grid .four            { width: 172px; }
+	.grid .five            { width: 220px; }
+	.grid .six             { width: 268px; }
+	.grid .seven           { width: 316px; }
+	.grid .eight           { width: 364px; }
+	.grid .nine            { width: 412px; }
+	.grid .ten             { width: 460px; }
+	.grid .eleven          { width: 508px; }
+	.grid .twelve          { width: 556px; }
+	.grid .thirteen        { width: 604px; }
+	.grid .fourteen        { width: 652px; }
+	.grid .fifteen         { width: 700px; }
+
+	/* Offsets */
+	.grid .offset-one      { padding-left: 48px;  }
+	.grid .offset-two      { padding-left: 96px;  }
+	.grid .offset-three    { padding-left: 144px; }
+	.grid .offset-four     { padding-left: 192px; }
+ 	.grid .offset-five     { padding-left: 240px; }
+ 	.grid .offset-six      { padding-left: 288px; }
+	.grid .offset-seven    { padding-left: 336px; }
+	.grid .offset-eight    { padding-left: 384px; }
+	.grid .offset-nine     { padding-left: 432px; }
+	.grid .offset-ten      { padding-left: 480px; }
+	.grid .offset-eleven   { padding-left: 528px; }
+	.grid .offset-twelve   { padding-left: 576px; }
+	.grid .offset-thirteen { padding-left: 624px; }
+	.grid .offset-fourteen { padding-left: 672px; }
+
+	/* Push columns */
+	.grid .push-one        { left: 48px;  }
+	.grid .push-two        { left: 96px;  }
+	.grid .push-three      { left: 144px; }
+	.grid .push-four       { left: 192px; }
+	.grid .push-five       { left: 240px; }
+	.grid .push-six        { left: 288px; }
+	.grid .push-seven      { left: 336px; }
+	.grid .push-eight      { left: 384px; }
+	.grid .push-nine       { left: 432px; }
+	.grid .push-ten        { left: 480px; }
+	.grid .push-eleven     { left: 528px; }
+	.grid .push-twelve     { left: 576px; }
+	.grid .push-thirteen   { left: 624px; }
+	.grid .push-fourteen   { left: 672px; }
+
+	/* Pull columns */
+	.grid .pull-one        { left: -48px;  }
+	.grid .pull-two        { left: -96px;  }
+	.grid .pull-three      { left: -144px; }
+	.grid .pull-four       { left: -192px; }
+	.grid .pull-five       { left: -240px; }
+	.grid .pull-six        { left: -288px; }
+	.grid .pull-seven      { left: -336px; }
+	.grid .pull-eight      { left: -384px; }
+	.grid .pull-nine       { left: -432px; }
+	.grid .pull-ten        { left: -480px; }
+	.grid .pull-eleven     { left: -528px; }
+	.grid .pull-twelve     { left: -576px; }
+	.grid .pull-thirteen   { left: -624px; }
+	.grid .pull-fourteen   { left: -672px; }
+
+  /* Style adjustments for 720px layouts */
+
+}
+
+
+/* =============================================================================
+   Landscape Tablet/Laptop
+   ========================================================================== */
+
+@media only screen and (min-width: 1024px) {
+
+	/* Fifteen 44px units, 10px gutters */
+	.grid                  { width: 960px; }
+
+	/* Units */
+	.grid .one             { width: 44px;  }
+	.grid .two             { width: 108px; }
+	.grid .three           { width: 172px; }
+	.grid .four            { width: 236px; }
+	.grid .five            { width: 300px; }
+	.grid .six             { width: 364px; }
+	.grid .seven           { width: 428px; }
+	.grid .eight           { width: 492px; }
+	.grid .nine            { width: 556px; }
+	.grid .ten             { width: 620px; }
+	.grid .eleven          { width: 684px; }
+	.grid .twelve          { width: 748px; }
+	.grid .thirteen        { width: 812px; }
+	.grid .fourteen        { width: 876px; }
+	.grid .fifteen         { width: 940px; }
+
+	/* Offsets */
+	.grid .offset-one      { padding-left: 64px;  }
+	.grid .offset-two      { padding-left: 128px; }
+	.grid .offset-three    { padding-left: 192px; }
+	.grid .offset-four     { padding-left: 256px; }
+	.grid .offset-five     { padding-left: 320px; }
+	.grid .offset-six      { padding-left: 384px; }
+	.grid .offset-seven    { padding-left: 448px; }
+	.grid .offset-eight    { padding-left: 512px; }
+	.grid .offset-nine     { padding-left: 576px; }
+	.grid .offset-ten      { padding-left: 640px; }
+	.grid .offset-eleven   { padding-left: 704px; }
+	.grid .offset-twelve   { padding-left: 768px; }
+	.grid .offset-thirteen { padding-left: 832px; }
+	.grid .offset-fourteen { padding-left: 896px; }
+
+	/* Push columns */
+	.grid .push-one        { left: 64px;  }
+	.grid .push-two        { left: 128px; }
+	.grid .push-three      { left: 192px; }
+	.grid .push-four       { left: 256px; }
+	.grid .push-five       { left: 320px; }
+	.grid .push-six        { left: 384px; }
+	.grid .push-seven      { left: 448px; }
+	.grid .push-eight      { left: 512px; }
+	.grid .push-nine       { left: 576px; }
+	.grid .push-ten        { left: 640px; }
+	.grid .push-eleven     { left: 704px; }
+	.grid .push-twelve     { left: 768px; }
+	.grid .push-thirteen   { left: 832px; }
+	.grid .push-fourteen   { left: 896px; }
+
+	/* Pull columns */
+	.grid .pull-one        { left: -64px;  }
+	.grid .pull-two        { left: -128px; }
+	.grid .pull-three      { left: -192px; }
+	.grid .pull-four       { left: -256px; }
+	.grid .pull-five       { left: -320px; }
+	.grid .pull-six        { left: -384px; }
+	.grid .pull-seven      { left: -448px; }
+	.grid .pull-eight      { left: -512px; }
+	.grid .pull-nine       { left: -576px; }
+	.grid .pull-ten        { left: -640px; }
+	.grid .pull-eleven     { left: -704px; }
+	.grid .pull-twelve     { left: -768px; }
+	.grid .pull-thirteen   { left: -832px; }
+	.grid .pull-fourteen   { left: -896px; }
+
+  /* Style adjustments for 960px layouts */
+
+}
+
+/* =============================================================================
+   Desktop
+   ========================================================================== */
+
+@media only screen and (min-width: 1280px) {
+  
+}
+
+
+/* =============================================================================
+   Widescreen
+   ========================================================================== */
+
+@media only screen and (min-width: 1400px) {
+
+}
+

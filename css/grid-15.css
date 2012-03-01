@@ -1,0 +1,109 @@
+/* 
+ * Grid 15
+ * A simple fixed-width grid with a 15 unit preset.
+ * https://github.com/johnsolarz/fluogrid
+ * Copyright 2012 8/7 Central
+ */
+
+
+/* =============================================================================
+   The Grid System
+   ========================================================================== */
+
+/*
+ * 1. Grid defines the layout area. Fifteen 44px units, 10px gutters = 960px.
+ * 2. Columns are made up of a number of units. Set gutter margins here.
+ * 3. Rows are horizontal divisions of similar content.
+ */
+
+.grid { margin: 0 auto; position: relative; width: 960px; }
+.column { display: inline; float: left; margin-left: 10px; margin-right: 10px; }
+.row { margin-bottom: 1.5em; }
+
+/* Nested columns */
+.alpha { margin-left: 0; }
+.omega { margin-right: 0; }
+
+/* Push pull columns */
+.push-one,    .pull-one,    .push-two,    .pull-two,
+.push-three,  .pull-three,  .push-four,   .pull-four,
+.push-five,   .pull-five,   .push-six,    .pull-six,
+.push-seven,  .pull-seven,  .push-eight,  .pull-eight,
+.push-nine,   .pull-nine,   .push-ten,    .pull-ten,
+.push-eleven, .pull-eleven, .push-twelve, .pull-twelve { position: relative; }
+
+/* Non-structural helper classes */
+.center { text-align: center; }
+.inset { padding: 1.5em; }
+.wide { width: 100%; }
+
+/* Micro clearfix hack */
+.grid:before, .grid:after, .row:before, .row:after { content: ""; display: table; }
+.grid:after, .row:after { clear: both; }
+.grid, .row { *zoom: 1; }
+
+
+/* Units */
+.grid .one             { width: 44px;  }
+.grid .two             { width: 108px; }
+.grid .three           { width: 172px; }
+.grid .four            { width: 236px; }
+.grid .five            { width: 300px; }
+.grid .six             { width: 364px; }
+.grid .seven           { width: 428px; }
+.grid .eight           { width: 492px; }
+.grid .nine            { width: 556px; }
+.grid .ten             { width: 620px; }
+.grid .eleven          { width: 684px; }
+.grid .twelve          { width: 748px; }
+.grid .thirteen        { width: 812px; }
+.grid .fourteen        { width: 876px; }
+.grid .fifteen         { width: 940px; }
+
+/* Offsets */
+.grid .offset-one      { padding-left: 64px;  }
+.grid .offset-two      { padding-left: 128px; }
+.grid .offset-three    { padding-left: 192px; }
+.grid .offset-four     { padding-left: 256px; }
+.grid .offset-five     { padding-left: 320px; }
+.grid .offset-six      { padding-left: 384px; }
+.grid .offset-seven    { padding-left: 448px; }
+.grid .offset-eight    { padding-left: 512px; }
+.grid .offset-nine     { padding-left: 576px; }
+.grid .offset-ten      { padding-left: 640px; }
+.grid .offset-eleven   { padding-left: 704px; }
+.grid .offset-twelve   { padding-left: 768px; }
+.grid .offset-thirteen { padding-left: 832px; }
+.grid .offset-fourteen { padding-left: 896px; }
+
+/* Push Columns */
+.grid .push-one        { left: 64px;  }
+.grid .push-two        { left: 128px; }
+.grid .push-three      { left: 192px; }
+.grid .push-four       { left: 256px; }
+.grid .push-five       { left: 320px; }
+.grid .push-six        { left: 384px; }
+.grid .push-seven      { left: 448px; }
+.grid .push-eight      { left: 512px; }
+.grid .push-nine       { left: 576px; }
+.grid .push-ten        { left: 640px; }
+.grid .push-eleven     { left: 704px; }
+.grid .push-twelve     { left: 768px; }
+.grid .push-thirteen   { left: 832px; }
+.grid .push-fourteen   { left: 896px; }
+
+/* Pull Columns */
+.grid .push-one        { left: -64px;  }
+.grid .push-two        { left: -128px; }
+.grid .push-three      { left: -192px; }
+.grid .push-four       { left: -256px; }
+.grid .push-five       { left: -320px; }
+.grid .push-six        { left: -384px; }
+.grid .push-seven      { left: -448px; }
+.grid .push-eight      { left: -512px; }
+.grid .push-nine       { left: -576px; }
+.grid .push-ten        { left: -640px; }
+.grid .push-eleven     { left: -704px; }
+.grid .push-twelve     { left: -768px; }
+.grid .push-thirteen   { left: -832px; }
+.grid .push-fourteen   { left: -896px; }
