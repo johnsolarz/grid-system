@@ -35,7 +35,7 @@
 /* Non-structural helper classes */
 .center { text-align: center; }
 .inset { padding: 1.5em; }
-.wide { width: 100%; }
+.full { width: 100%; }
 
 /* Micro clearfix hack */
 .grid:before, .grid:after, .row:before, .row:after { content: ""; display: table; }
