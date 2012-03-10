@@ -68,7 +68,7 @@
 
 @media only screen and (max-width: 767px) {
 
-  /* One 300px column, no guters */
+	/* One 300px column, no guters */
 	.grid                  { width: 300px; }
 	.column                { margin-left: 0; margin-right: 0; }
 
@@ -86,7 +86,7 @@
 	.grid .eleven,
 	.grid .twelve          { width: 300px; }
 
-  /* Style adjustments for 300px layouts */
+	/* Style adjustments for 300px layouts */
 
 }
 
@@ -97,7 +97,7 @@
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
-  /* One 420px column, no gutters */
+	/* One 420px column, no gutters */
 	.grid                  { width: 420px; }
 	.column                { margin-left: 0; margin-right: 0; }
 
@@ -115,7 +115,7 @@
 	.grid .eleven,
 	.grid .twelve          { width: 420px; }
 
-  /* Style adjustments for 420px layouts */
+	/* Style adjustments for 420px layouts */
 
 }
 
@@ -182,7 +182,7 @@
 	.grid .pull-ten        { left: -600px; }
 	.grid .pull-eleven     { left: -660px; }
 
-  /* Style adjustments for 720px layouts */
+	/* Style adjustments for 720px layouts */
 
 }
 
@@ -249,7 +249,7 @@
 	.grid .pull-ten        { left: -800px; }
 	.grid .pull-eleven     { left: -880px; }
 
-  /* Style adjustments for 960px layouts */
+	/* Style adjustments for 960px layouts */
 
 }
 
@@ -260,7 +260,7 @@
 
 @media only screen and (min-width: 1280px) {
 
-  /* Style adjustments for desktop layouts */
+	/* Style adjustments for desktop layouts */
 
 }
 
@@ -271,7 +271,7 @@
 
 @media only screen and (min-width: 1400px) {
 
-  /* Style adjustments for widescreen layouts */
+	/* Style adjustments for widescreen layouts */
 
 }
 
