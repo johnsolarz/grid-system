@@ -12,8 +12,8 @@
 
 /*
  * Grid defines the layout area. Modify widths inside media quieries as required.
- * Columns are made up of a number of units, margins define gutters widths.
- * Rows are horizontal divisions of similar content and self-clearing.
+ * Columns are made up of a number of units. Left/right margins define gutter widths.
+ * Rows are horizontal divisions of similar content and are self-clearing.
  */
 
 .grid { margin: 0 auto; position: relative; }
