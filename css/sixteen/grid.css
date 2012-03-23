@@ -1,6 +1,6 @@
 /* 
- * Grid 16
- * A simple fixed-width grid with a 16 unit preset.
+ * Fluogrid™
+ * Responsive fixed-width layout with a sixteen unit grid.
  * https://github.com/johnsolarz/fluogrid
  * Copyright 2012 8/7 Central
  */
@@ -11,12 +11,12 @@
    ========================================================================== */
 
 /*
- * 1. Grid defines the layout area. Sixteen 40px units, 10px gutters = 960px.
- * 2. Columns are made up of a number of units. Set gutter margins here.
- * 3. Rows are horizontal divisions of similar content.
+ * Grid defines the layout area. Modify widths inside media quieries as required.
+ * Columns are made up of a number of units, margins define gutters widths.
+ * Rows are horizontal divisions of similar content and self-clearing.
  */
 
-.grid { margin: 0 auto; position: relative; width: 960px; }
+.grid { margin: 0 auto; position: relative; }
 .column { display: inline; float: left; margin-left: 10px; margin-right: 10px; }
 .row { margin-bottom: 1.5em; }
 
@@ -24,7 +24,7 @@
 .alpha { margin-left: 0; }
 .omega { margin-right: 0; }
 
-/* Push pull columns */
+/* Push pull repositioning */
 .push-one,    .pull-one,    .push-two,    .pull-two,
 .push-three,  .pull-three,  .push-four,   .pull-four,
 .push-five,   .pull-five,   .push-six,    .pull-six,
@@ -32,18 +32,20 @@
 .push-nine,   .pull-nine,   .push-ten,    .pull-ten,
 .push-eleven, .pull-eleven, .push-twelve, .pull-twelve { position: relative; }
 
-/* Non-structural helper classes */
-.center { text-align: center; }
-.inset { padding: 1.5em; }
-.full { width: 100%; }
+/* Fluid media */
+img, object, embed, video { height: auto; max-width: 100%;	_width: 100%; }
 
 /* Micro clearfix hack */
 .grid:before, .grid:after, .row:before, .row:after { content: ""; display: table; }
 .grid:after, .row:after { clear: both; }
 .grid, .row { *zoom: 1; }
 
+/* Non-structural helper classes */
+.center { text-align: center; }
+.inset { padding: 1.5em; }
+.full { width: 100%; }
 
-/* Units */
+/* Unit widths */
 .grid .one             { width: 40px;  }
 .grid .two             { width: 100px; }
 .grid .three           { width: 160px; }
@@ -61,7 +63,7 @@
 .grid .fifteen         { width: 880px; }
 .grid .sixteen         { width: 940px; }
 
-/* Offsets */
+/* Offset space */
 .grid .offset-one      { padding-left: 60px;  }
 .grid .offset-two      { padding-left: 120px; }
 .grid .offset-three    { padding-left: 180px; }
@@ -78,7 +80,7 @@
 .grid .offset-fourteen { padding-left: 840px; }
 .grid .offset-fifteen  { padding-left: 900px; }
 
-/* Push Columns */
+/* Push columns */
 .grid .push-one        { left: 60px;  }
 .grid .push-two        { left: 120px; }
 .grid .push-three      { left: 180px; }
@@ -95,7 +97,7 @@
 .grid .push-fourteen   { left: 840px; }
 .grid .push-fifteen    { left: 900px; }
 
-/* Pull Columns */
+/* Pull columns */
 .grid .pull-one        { left: -60px;  }
 .grid .pull-two        { left: -120px; }
 .grid .pull-three      { left: -180px; }

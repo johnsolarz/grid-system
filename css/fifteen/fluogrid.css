@@ -1,6 +1,6 @@
 /* 
- * Fluo 15
- * A simple, responsive fixed-width grid with a 15 unit preset.
+ * Fluogrid™
+ * Responsive fixed-width layout with a twelve unit grid.
  * https://github.com/johnsolarz/fluogrid
  * Copyright 2012 8/7 Central
  */
@@ -11,9 +11,9 @@
    ========================================================================== */
 
 /*
- * 1. Grid defines the layout area. Modify widths inside media quieries as required.
- * 2. Columns are made up of a number of units. Set gutter margins here.
- * 3. Rows are horizontal divisions of similar content.
+ * Grid defines the layout area. Modify widths inside media quieries as required.
+ * Columns are made up of a number of units, margins define gutters widths.
+ * Rows are horizontal divisions of similar content and self-clearing.
  */
 
 .grid { margin: 0 auto; position: relative; }
@@ -24,7 +24,7 @@
 .alpha { margin-left: 0; }
 .omega { margin-right: 0; }
 
-/* Push pull columns */
+/* Push pull repositioning */
 .push-one,    .pull-one,    .push-two,    .pull-two,
 .push-three,  .pull-three,  .push-four,   .pull-four,
 .push-five,   .pull-five,   .push-six,    .pull-six,
@@ -32,47 +32,34 @@
 .push-nine,   .pull-nine,   .push-ten,    .pull-ten,
 .push-eleven, .pull-eleven, .push-twelve, .pull-twelve { position: relative; }
 
-/* Non-structural helper classes */
-.center { text-align: center; }
-.inset { padding: 1.5em; }
-.full { width: 100%; }
+/* Fluid media */
+img, object, embed, video { height: auto; max-width: 100%;	_width: 100%; }
 
 /* Micro clearfix hack */
 .grid:before, .grid:after, .row:before, .row:after { content: ""; display: table; }
 .grid:after, .row:after { clear: both; }
 .grid, .row { *zoom: 1; }
 
-
-/* =============================================================================
-   Primary ('mobile first') styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Non-structural helper classes */
+.center { text-align: center; }
+.inset { padding: 1.5em; }
+.full { width: 100%; }
 
 
 /* =============================================================================
-   Mobile portrait
+   Mobile
    ========================================================================== */
 
 @media only screen and (max-width: 767px) {
 
-	/* One 300px column, no guters */
+	/* 
+	 * Style adjustments for 300px layouts
+	 * One column, no gutters
+	 */
+
 	.grid                  { width: 300px; }
 	.column                { margin-left: 0; margin-right: 0; }
 
-	/* Units */
 	.grid .one,
 	.grid .two,
 	.grid .three,
@@ -84,12 +71,7 @@
 	.grid .nine,
 	.grid .ten,
 	.grid .eleven,
-	.grid .twelve,
-	.grid .thirteen,
-	.grid .fourteen,
-	.grid .fifteen         { width: 300px; }
-
-	/* Style adjustments for 300px layouts */
+	.grid .twelve          { width: 300px; }
 
 }
 
@@ -97,14 +79,17 @@
 /* =============================================================================
    Mobile landscape
    ========================================================================== */
-
+ 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
-	/* One 420px column, no gutters */
+	/* 
+   * Style adjustments for 480px layouts
+   * One column, no gutters
+   */
+
 	.grid                  { width: 420px; }
 	.column                { margin-left: 0; margin-right: 0; }
 
-	/* Units */
 	.grid .one,
 	.grid .two,
 	.grid .three,
@@ -116,12 +101,7 @@
 	.grid .nine,
 	.grid .ten,
 	.grid .eleven,
-	.grid .twelve,
-	.grid .thirteen,
-	.grid .fourteen,
-	.grid .fifteen         { width: 420px; }
-
-	/* Style adjustments for 420px layouts */
+	.grid .twelve          { width: 420px; }
 
 }
 
@@ -129,13 +109,16 @@
 /* =============================================================================
    Tablet
    ========================================================================== */
-   
+
 @media only screen and (min-width: 768px) { 
 
-	/* Fifteen 28px units, 10px gutters */
+	/*
+	 * Style adjustemts for 720px layouts
+	 * Fifteen 28px units, 20px gutters
+	 */
+
 	.grid                  { width: 720px; }
 
-	/* Units */
 	.grid .one             { width: 28px;  }
 	.grid .two             { width: 76px;  }
 	.grid .three           { width: 124px; }
@@ -152,7 +135,6 @@
 	.grid .fourteen        { width: 652px; }
 	.grid .fifteen         { width: 700px; }
 
-	/* Offsets */
 	.grid .offset-one      { padding-left: 48px;  }
 	.grid .offset-two      { padding-left: 96px;  }
 	.grid .offset-three    { padding-left: 144px; }
@@ -168,7 +150,6 @@
 	.grid .offset-thirteen { padding-left: 624px; }
 	.grid .offset-fourteen { padding-left: 672px; }
 
-	/* Push columns */
 	.grid .push-one        { left: 48px;  }
 	.grid .push-two        { left: 96px;  }
 	.grid .push-three      { left: 144px; }
@@ -184,7 +165,6 @@
 	.grid .push-thirteen   { left: 624px; }
 	.grid .push-fourteen   { left: 672px; }
 
-	/* Pull columns */
 	.grid .pull-one        { left: -48px;  }
 	.grid .pull-two        { left: -96px;  }
 	.grid .pull-three      { left: -144px; }
@@ -200,8 +180,6 @@
 	.grid .pull-thirteen   { left: -624px; }
 	.grid .pull-fourteen   { left: -672px; }
 
-	/* Style adjustments for 720px layouts */
-
 }
 
 
@@ -211,10 +189,13 @@
 
 @media only screen and (min-width: 1024px) {
 
-	/* Fifteen 44px units, 10px gutters */
+	/*
+	 * Style adjustments for 960px layouts
+	 * Fifteen 44px units, 20px gutters
+	 */
+
 	.grid                  { width: 960px; }
 
-	/* Units */
 	.grid .one             { width: 44px;  }
 	.grid .two             { width: 108px; }
 	.grid .three           { width: 172px; }
@@ -231,7 +212,6 @@
 	.grid .fourteen        { width: 876px; }
 	.grid .fifteen         { width: 940px; }
 
-	/* Offsets */
 	.grid .offset-one      { padding-left: 64px;  }
 	.grid .offset-two      { padding-left: 128px; }
 	.grid .offset-three    { padding-left: 192px; }
@@ -247,7 +227,6 @@
 	.grid .offset-thirteen { padding-left: 832px; }
 	.grid .offset-fourteen { padding-left: 896px; }
 
-	/* Push columns */
 	.grid .push-one        { left: 64px;  }
 	.grid .push-two        { left: 128px; }
 	.grid .push-three      { left: 192px; }
@@ -263,7 +242,6 @@
 	.grid .push-thirteen   { left: 832px; }
 	.grid .push-fourteen   { left: 896px; }
 
-	/* Pull columns */
 	.grid .pull-one        { left: -64px;  }
 	.grid .pull-two        { left: -128px; }
 	.grid .pull-three      { left: -192px; }
@@ -279,9 +257,8 @@
 	.grid .pull-thirteen   { left: -832px; }
 	.grid .pull-fourteen   { left: -896px; }
 
-	/* Style adjustments for 960px layouts */
-
 }
+
 
 /* =============================================================================
    Desktop

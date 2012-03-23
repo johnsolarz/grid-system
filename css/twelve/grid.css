@@ -1,6 +1,6 @@
 /* 
- * Grid 12
- * A simple fixed-width grid with a 12 unit preset.
+ * Fluogrid™
+ * Fixed-width layout with a twelve unit grid.
  * https://github.com/johnsolarz/fluogrid
  * Copyright 2012 8/7 Central
  */
@@ -11,12 +11,12 @@
    ========================================================================== */
 
 /*
- * 1. Grid defines the layout area. Twelve 60px units, 10px gutters = 960px.
- * 2. Columns are made up of a number of units. Set gutter margins here.
- * 3. Rows are horizontal divisions of similar content.
+ * Grid defines the layout area. Modify widths inside media quieries as required.
+ * Columns are made up of a number of units, margins define gutters widths.
+ * Rows are horizontal divisions of similar content and self-clearing.
  */
 
-.grid { margin: 0 auto; position: relative; width: 960px; }
+.grid { margin: 0 auto; position: relative; }
 .column { display: inline; float: left; margin-left: 10px; margin-right: 10px; }
 .row { margin-bottom: 1.5em; }
 
@@ -24,7 +24,7 @@
 .alpha { margin-left: 0; }
 .omega { margin-right: 0; }
 
-/* Push pull columns */
+/* Push pull repositioning */
 .push-one,    .pull-one,    .push-two,    .pull-two,
 .push-three,  .pull-three,  .push-four,   .pull-four,
 .push-five,   .pull-five,   .push-six,    .pull-six,
@@ -32,18 +32,17 @@
 .push-nine,   .pull-nine,   .push-ten,    .pull-ten,
 .push-eleven, .pull-eleven, .push-twelve, .pull-twelve { position: relative; }
 
-/* Non-structural helper classes */
-.center { text-align: center; }
-.inset { padding: 1.5em; }
-.full { width: 100%; }
-
 /* Micro clearfix hack */
 .grid:before, .grid:after, .row:before, .row:after { content: ""; display: table; }
 .grid:after, .row:after { clear: both; }
 .grid, .row { *zoom: 1; }
 
+/* Non-structural helper classes */
+.center { text-align: center; }
+.inset { padding: 1.5em; }
+.full { width: 100%; }
 
-/* Units */
+/* Unit widths */
 .grid .one             { width: 60px;  }
 .grid .two             { width: 140px; }
 .grid .three           { width: 220px; }
@@ -57,7 +56,7 @@
 .grid .eleven          { width: 860px; }
 .grid .twelve          { width: 940px; }
 
-/* Offsets */
+/* Offset space */
 .grid. offset-one      { padding-left: 80px;  }
 .grid .offset-two      { padding-left: 160px; }
 .grid .offset-three    { padding-left: 240px; }
