@@ -1,6 +1,6 @@
 /* 
- * Fluogrid™
- * Responsive fixed-width layout with a sixteen unit grid.
+ * Fluogrid™ Sixteen
+ * Fixed-width layout with a sixteen unit grid.
  * https://github.com/johnsolarz/fluogrid
  * Copyright 2012 8/7 Central
  */
@@ -11,12 +11,12 @@
    ========================================================================== */
 
 /*
- * Grid defines the layout area. Modify widths inside media quieries as required.
+ * Grid defines the layout area. Sixteen 40px units, 20px gutters = 960px layout.
  * Columns are made up of a number of units. Left/right margins define gutter widths.
  * Rows are horizontal divisions of similar content and are self-clearing.
  */
 
-.grid { margin: 0 auto; position: relative; }
+.grid { margin: 0 auto; position: relative; width: 960px; }
 .column { display: inline; float: left; margin-left: 10px; margin-right: 10px; }
 .row { margin-bottom: 1.5em; }
 

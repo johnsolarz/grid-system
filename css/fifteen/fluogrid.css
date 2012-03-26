@@ -1,5 +1,5 @@
 /* 
- * Fluogrid™
+ * Fluogrid™ Twelve
  * Responsive fixed-width layout with a twelve unit grid.
  * https://github.com/johnsolarz/fluogrid
  * Copyright 2012 8/7 Central
@@ -71,7 +71,10 @@ img, object, embed, video { height: auto; max-width: 100%;	_width: 100%; }
 	.grid .nine,
 	.grid .ten,
 	.grid .eleven,
-	.grid .twelve          { width: 300px; }
+	.grid .twelve,
+	.grid .thirteen,
+	.grid .fourteen,
+	.grid .fifteen         { width: 300px; }
 
 }
 
@@ -101,7 +104,10 @@ img, object, embed, video { height: auto; max-width: 100%;	_width: 100%; }
 	.grid .nine,
 	.grid .ten,
 	.grid .eleven,
-	.grid .twelve          { width: 420px; }
+	.grid .twelve,
+	.grid .thirteen,
+	.grid .fourteen,
+	.grid .fifteen         { width: 420px; }
 
 }
 
