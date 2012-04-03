@@ -1,6 +1,6 @@
 /* 
- * Fluogrid™ Twelve
- * Responsive fixed-width layout with a twelve unit grid.
+ * Fluogrid™ Fifteen
+ * Adaptive grid layout.
  * https://github.com/johnsolarz/fluogrid
  * Copyright 2012 8/7 Central
  */
@@ -11,34 +11,26 @@
    ========================================================================== */
 
 /*
- * Grid defines the layout area. Modify widths inside media quieries as required.
- * Columns are made up of a number of units. Left/right margins define gutter widths.
- * Rows are horizontal divisions of similar content and are self-clearing.
+ * Grid defines the layout area. Adjust grid/unit/margin widths per design.
+ * Units are the smallest vertical measure. A column is made of a number of units.
+ * Sections are horizontal divisions of content, set to baseline grid.
  */
 
-.grid { margin: 0 auto; position: relative; }
-.column { display: inline; float: left; margin-left: 10px; margin-right: 10px; }
-.row { margin-bottom: 1.5em; }
+.grid                    { margin: 0 auto; position: relative; }
+.column                  { display: inline; float: left; }
+.section                 { margin-bottom: 1.5em; }
 
 /* Nested columns */
-.alpha { margin-left: 0; }
-.omega { margin-right: 0; }
-
-/* Push pull repositioning */
-.push-one,    .pull-one,    .push-two,    .pull-two,
-.push-three,  .pull-three,  .push-four,   .pull-four,
-.push-five,   .pull-five,   .push-six,    .pull-six,
-.push-seven,  .pull-seven,  .push-eight,  .pull-eight,
-.push-nine,   .pull-nine,   .push-ten,    .pull-ten,
-.push-eleven, .pull-eleven, .push-twelve, .pull-twelve { position: relative; }
+.column.alpha            { margin-left: 0; }
+.column.omega            { margin-right: 0; }
 
 /* Fluid media */
-img, object, embed, video { height: auto; max-width: 100%;	_width: 100%; }
+img, object, embed, video { height: auto; max-width: 100%; }
 
 /* Micro clearfix hack */
-.grid:before, .grid:after, .row:before, .row:after { content: ""; display: table; }
-.grid:after, .row:after { clear: both; }
-.grid, .row { *zoom: 1; }
+.grid:before, .grid:after, .section:before, .section:after { content: ""; display: table; }
+.grid:after, .section:after { clear: both; }
+.grid, .section { *zoom: 1; }
 
 /* Non-structural helper classes */
 .center { text-align: center; }
@@ -47,36 +39,29 @@ img, object, embed, video { height: auto; max-width: 100%;	_width: 100%; }
 
 
 /* =============================================================================
-   Mobile
+   Mobile first styles
    ========================================================================== */
 
-@media only screen and (max-width: 767px) {
+/* 
+ * 300px single column layout
+ * No gutters, one unit @ 300px
+ */
+   
+.grid                    { width: 300px; }
+.column                  { margin-left: 0; margin-right: 0; }
 
-	/* 
-	 * Style adjustments for 300px layouts
-	 * One column, no gutters
-	 */
-
-	.grid                  { width: 300px; }
-	.column                { margin-left: 0; margin-right: 0; }
-
-	.grid .one,
-	.grid .two,
-	.grid .three,
-	.grid .four,
-	.grid .five,
-	.grid .six,
-	.grid .seven,
-	.grid .eight,
-	.grid .nine,
-	.grid .ten,
-	.grid .eleven,
-	.grid .twelve,
-	.grid .thirteen,
-	.grid .fourteen,
-	.grid .fifteen         { width: 300px; }
-
-}
+.grid .one,
+.grid .two,
+.grid .three,
+.grid .four,
+.grid .five,
+.grid .six,
+.grid .seven,
+.grid .eight,
+.grid .nine,
+.grid .ten,
+.grid .eleven,
+.grid .twelve            { width: 300px; }
 
 
 /* =============================================================================
@@ -86,9 +71,9 @@ img, object, embed, video { height: auto; max-width: 100%;	_width: 100%; }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
 	/* 
-   * Style adjustments for 480px layouts
-   * One column, no gutters
-   */
+	 * 420px single column layout
+	 * No gutters (inherit), one unit @ 420px
+	 */
 
 	.grid                  { width: 420px; }
 	.column                { margin-left: 0; margin-right: 0; }
@@ -119,11 +104,12 @@ img, object, embed, video { height: auto; max-width: 100%;	_width: 100%; }
 @media only screen and (min-width: 768px) { 
 
 	/*
-	 * Style adjustemts for 720px layouts
-	 * Fifteen 28px units, 20px gutters
+	 * 720px multicolumn layout
+	 * Gutters @ 20px, twelve units @ 40px
 	 */
 
 	.grid                  { width: 720px; }
+	.column                { margin-left: 10px; margin-right: 10px; }
 
 	.grid .one             { width: 28px;  }
 	.grid .two             { width: 76px;  }
@@ -156,35 +142,35 @@ img, object, embed, video { height: auto; max-width: 100%;	_width: 100%; }
 	.grid .offset-thirteen { padding-left: 624px; }
 	.grid .offset-fourteen { padding-left: 672px; }
 
-	.grid .push-one        { left: 48px;  }
-	.grid .push-two        { left: 96px;  }
-	.grid .push-three      { left: 144px; }
-	.grid .push-four       { left: 192px; }
-	.grid .push-five       { left: 240px; }
-	.grid .push-six        { left: 288px; }
-	.grid .push-seven      { left: 336px; }
-	.grid .push-eight      { left: 384px; }
-	.grid .push-nine       { left: 432px; }
-	.grid .push-ten        { left: 480px; }
-	.grid .push-eleven     { left: 528px; }
-	.grid .push-twelve     { left: 576px; }
-	.grid .push-thirteen   { left: 624px; }
-	.grid .push-fourteen   { left: 672px; }
+	.grid .push-one        { position: relative; left: 48px;  }
+	.grid .push-two        { position: relative; left: 96px;  }
+	.grid .push-three      { position: relative; left: 144px; }
+	.grid .push-four       { position: relative; left: 192px; }
+	.grid .push-five       { position: relative; left: 240px; }
+	.grid .push-six        { position: relative; left: 288px; }
+	.grid .push-seven      { position: relative; left: 336px; }
+	.grid .push-eight      { position: relative; left: 384px; }
+	.grid .push-nine       { position: relative; left: 432px; }
+	.grid .push-ten        { position: relative; left: 480px; }
+	.grid .push-eleven     { position: relative; left: 528px; }
+	.grid .push-twelve     { position: relative; left: 576px; }
+	.grid .push-thirteen   { position: relative; left: 624px; }
+	.grid .push-fourteen   { position: relative; left: 672px; }
 
-	.grid .pull-one        { left: -48px;  }
-	.grid .pull-two        { left: -96px;  }
-	.grid .pull-three      { left: -144px; }
-	.grid .pull-four       { left: -192px; }
-	.grid .pull-five       { left: -240px; }
-	.grid .pull-six        { left: -288px; }
-	.grid .pull-seven      { left: -336px; }
-	.grid .pull-eight      { left: -384px; }
-	.grid .pull-nine       { left: -432px; }
-	.grid .pull-ten        { left: -480px; }
-	.grid .pull-eleven     { left: -528px; }
-	.grid .pull-twelve     { left: -576px; }
-	.grid .pull-thirteen   { left: -624px; }
-	.grid .pull-fourteen   { left: -672px; }
+	.grid .pull-one        { position: relative; left: -48px;  }
+	.grid .pull-two        { position: relative; left: -96px;  }
+	.grid .pull-three      { position: relative; left: -144px; }
+	.grid .pull-four       { position: relative; left: -192px; }
+	.grid .pull-five       { position: relative; left: -240px; }
+	.grid .pull-six        { position: relative; left: -288px; }
+	.grid .pull-seven      { position: relative; left: -336px; }
+	.grid .pull-eight      { position: relative; left: -384px; }
+	.grid .pull-nine       { position: relative; left: -432px; }
+	.grid .pull-ten        { position: relative; left: -480px; }
+	.grid .pull-eleven     { position: relative; left: -528px; }
+	.grid .pull-twelve     { position: relative; left: -576px; }
+	.grid .pull-thirteen   { position: relative; left: -624px; }
+	.grid .pull-fourteen   { position: relative; left: -672px; }
 
 }
 
@@ -196,8 +182,8 @@ img, object, embed, video { height: auto; max-width: 100%;	_width: 100%; }
 @media only screen and (min-width: 1024px) {
 
 	/*
-	 * Style adjustments for 960px layouts
-	 * Fifteen 44px units, 20px gutters
+	 * 960px multicolumn layout
+	 * Gutters @ 20px (inherit), twelve units @ 60px
 	 */
 
 	.grid                  { width: 960px; }
@@ -272,7 +258,6 @@ img, object, embed, video { height: auto; max-width: 100%;	_width: 100%; }
 
 @media only screen and (min-width: 1280px) {
 
-	/* Style adjustments for desktop layouts */
 
 }
 
@@ -283,7 +268,5 @@ img, object, embed, video { height: auto; max-width: 100%;	_width: 100%; }
 
 @media only screen and (min-width: 1400px) {
 
-	/* Style adjustments for widescreen layouts */
 
 }
-

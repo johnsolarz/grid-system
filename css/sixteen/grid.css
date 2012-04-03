@@ -1,6 +1,6 @@
 /* 
  * Fluogrid™ Sixteen
- * Fixed-width layout with a sixteen unit grid.
+ * Fixed grid layout.
  * https://github.com/johnsolarz/fluogrid
  * Copyright 2012 8/7 Central
  */
@@ -11,34 +11,23 @@
    ========================================================================== */
 
 /*
- * Grid defines the layout area. Sixteen 40px units, 20px gutters = 960px layout.
- * Columns are made up of a number of units. Left/right margins define gutter widths.
- * Rows are horizontal divisions of similar content and are self-clearing.
+ * Grid defines the layout area. Adjust grid/unit/margin widths per design.
+ * Units are the smallest vertical measure. A column is made of a number of units.
+ * Sections are horizontal divisions of content, set to baseline grid.
  */
 
-.grid { margin: 0 auto; position: relative; width: 960px; }
-.column { display: inline; float: left; margin-left: 10px; margin-right: 10px; }
-.row { margin-bottom: 1.5em; }
+.grid                  { margin: 0 auto; position: relative; width: 960px; }
+.column                { display: inline; float: left; margin-left: 10px; margin-right: 10px; }
+.section               { margin-bottom: 1.5em; }
 
 /* Nested columns */
-.alpha { margin-left: 0; }
-.omega { margin-right: 0; }
-
-/* Push pull repositioning */
-.push-one,    .pull-one,    .push-two,    .pull-two,
-.push-three,  .pull-three,  .push-four,   .pull-four,
-.push-five,   .pull-five,   .push-six,    .pull-six,
-.push-seven,  .pull-seven,  .push-eight,  .pull-eight,
-.push-nine,   .pull-nine,   .push-ten,    .pull-ten,
-.push-eleven, .pull-eleven, .push-twelve, .pull-twelve { position: relative; }
-
-/* Fluid media */
-img, object, embed, video { height: auto; max-width: 100%;	_width: 100%; }
+.column.alpha          { margin-left: 0; }
+.column.omega          { margin-right: 0; }
 
 /* Micro clearfix hack */
-.grid:before, .grid:after, .row:before, .row:after { content: ""; display: table; }
-.grid:after, .row:after { clear: both; }
-.grid, .row { *zoom: 1; }
+.grid:before, .grid:after, .section:before, .section:after { content: ""; display: table; }
+.grid:after, .section:after { clear: both; }
+.grid, .section { *zoom: 1; }
 
 /* Non-structural helper classes */
 .center { text-align: center; }
@@ -81,36 +70,35 @@ img, object, embed, video { height: auto; max-width: 100%;	_width: 100%; }
 .grid .offset-fifteen  { padding-left: 900px; }
 
 /* Push columns */
-.grid .push-one        { left: 60px;  }
-.grid .push-two        { left: 120px; }
-.grid .push-three      { left: 180px; }
-.grid .push-four       { left: 240px; }
-.grid .push-five       { left: 300px; }
-.grid .push-six        { left: 360px; }
-.grid .push-seven      { left: 420px; }
-.grid .push-eight      { left: 480px; }
-.grid .push-nine       { left: 540px; }
-.grid .push-ten        { left: 600px; }
-.grid .push-eleven     { left: 660px; }
-.grid .push-twelve     { left: 720px; }
-.grid .push-thirteen   { left: 780px; }
-.grid .push-fourteen   { left: 840px; }
-.grid .push-fifteen    { left: 900px; }
+.grid .push-one        { position: relative; left: 60px;  }
+.grid .push-two        { position: relative; left: 120px; }
+.grid .push-three      { position: relative; left: 180px; }
+.grid .push-four       { position: relative; left: 240px; }
+.grid .push-five       { position: relative; left: 300px; }
+.grid .push-six        { position: relative; left: 360px; }
+.grid .push-seven      { position: relative; left: 420px; }
+.grid .push-eight      { position: relative; left: 480px; }
+.grid .push-nine       { position: relative; left: 540px; }
+.grid .push-ten        { position: relative; left: 600px; }
+.grid .push-eleven     { position: relative; left: 660px; }
+.grid .push-twelve     { position: relative; left: 720px; }
+.grid .push-thirteen   { position: relative; left: 780px; }
+.grid .push-fourteen   { position: relative; left: 840px; }
+.grid .push-fifteen    { position: relative; left: 900px; }
 
 /* Pull columns */
-.grid .pull-one        { left: -60px;  }
-.grid .pull-two        { left: -120px; }
-.grid .pull-three      { left: -180px; }
-.grid .pull-four       { left: -240px; }
-.grid .pull-five       { left: -300px; }
-.grid .pull-six        { left: -360px; }
-.grid .pull-seven      { left: -420px; }
-.grid .pull-eight      { left: -480px; }
-.grid .pull-nine       { left: -540px; }
-.grid .pull-ten        { left: -600px; }
-.grid .pull-eleven     { left: -660px; }
-.grid .pull-twelve     { left: -720px; }
-.grid .pull-thirteen   { left: -780px; }
-.grid .pull-fouteen    { left: -840px; }
-.grid .pull-fifteen    { left: -900px; }
-
+.grid .pull-one        { position: relative; left: -60px;  }
+.grid .pull-two        { position: relative; left: -120px; }
+.grid .pull-three      { position: relative; left: -180px; }
+.grid .pull-four       { position: relative; left: -240px; }
+.grid .pull-five       { position: relative; left: -300px; }
+.grid .pull-six        { position: relative; left: -360px; }
+.grid .pull-seven      { position: relative; left: -420px; }
+.grid .pull-eight      { position: relative; left: -480px; }
+.grid .pull-nine       { position: relative; left: -540px; }
+.grid .pull-ten        { position: relative; left: -600px; }
+.grid .pull-eleven     { position: relative; left: -660px; }
+.grid .pull-twelve     { position: relative; left: -720px; }
+.grid .pull-thirteen   { position: relative; left: -780px; }
+.grid .pull-fouteen    { position: relative; left: -840px; }
+.grid .pull-fifteen    { position: relative; left: -900px; }

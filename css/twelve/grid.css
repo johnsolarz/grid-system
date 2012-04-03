@@ -1,6 +1,6 @@
 /* 
  * Fluogrid™ Twelve
- * Fixed-width layout with a twelve unit grid.
+ * Fixed grid layout.
  * https://github.com/johnsolarz/fluogrid
  * Copyright 2012 8/7 Central
  */
@@ -11,38 +11,30 @@
    ========================================================================== */
 
 /*
- * Grid defines the layout area. Twelve 60px units, 20px gutters = 960px layout.
- * Columns are made up of a number of units. Left/right margins define gutter widths.
- * Rows are horizontal divisions of similar content and are self-clearing.
+ * Grid defines the layout area. Adjust grid/unit/margin widths per design.
+ * Units are the smallest vertical measure. A column is made of a number of units.
+ * Sections are horizontal divisions of content, set to baseline grid.
  */
 
-.grid { margin: 0 auto; position: relative; width: 960px; }
-.column { display: inline; float: left; margin-left: 10px; margin-right: 10px; }
-.row { margin-bottom: 1.5em; }
+.grid                  { margin: 0 auto; position: relative; width: 960px; }
+.column                { display: inline; float: left; margin-left: 10px; margin-right: 10px; }
+.section               { margin-bottom: 1.5em; }
 
 /* Nested columns */
-.alpha { margin-left: 0; }
-.omega { margin-right: 0; }
-
-/* Push pull repositioning */
-.push-one,    .pull-one,    .push-two,    .pull-two,
-.push-three,  .pull-three,  .push-four,   .pull-four,
-.push-five,   .pull-five,   .push-six,    .pull-six,
-.push-seven,  .pull-seven,  .push-eight,  .pull-eight,
-.push-nine,   .pull-nine,   .push-ten,    .pull-ten,
-.push-eleven, .pull-eleven, .push-twelve, .pull-twelve { position: relative; }
+.column.alpha          { margin-left: 0; }
+.column.omega          { margin-right: 0; }
 
 /* Micro clearfix hack */
-.grid:before, .grid:after, .row:before, .row:after { content: ""; display: table; }
-.grid:after, .row:after { clear: both; }
-.grid, .row { *zoom: 1; }
+.grid:before, .grid:after, .section:before, .section:after { content: ""; display: table; }
+.grid:after, .section:after { clear: both; }
+.grid, .section { *zoom: 1; }
 
 /* Non-structural helper classes */
 .center { text-align: center; }
 .inset { padding: 1.5em; }
 .full { width: 100%; }
 
-/* Unit widths */
+/* Units */
 .grid .one             { width: 60px;  }
 .grid .two             { width: 140px; }
 .grid .three           { width: 220px; }
@@ -70,28 +62,27 @@
 .grid .offset-eleven   { padding-left: 880px; }
 	
 /* Push columns */
-.grid .push-one        { left: 80px;  }
-.grid .push-two        { left: 160px; }
-.grid .push-three      { left: 240px; }
-.grid .push-four       { left: 320px; }
-.grid .push-five       { left: 400px; }
-.grid .push-six        { left: 480px; }
-.grid .push-seven      { left: 560px; }
-.grid .push-eight      { left: 640px; }
-.grid .push-nine       { left: 720px; }
-.grid .push-ten        { left: 800px; }
-.grid .push-eleven     { left: 880px; }
+.grid .push-one        { position: relative; left: 80px;  }
+.grid .push-two        { position: relative; left: 160px; }
+.grid .push-three      { position: relative; left: 240px; }
+.grid .push-four       { position: relative; left: 320px; }
+.grid .push-five       { position: relative; left: 400px; }
+.grid .push-six        { position: relative; left: 480px; }
+.grid .push-seven      { position: relative; left: 560px; }
+.grid .push-eight      { position: relative; left: 640px; }
+.grid .push-nine       { position: relative; left: 720px; }
+.grid .push-ten        { position: relative; left: 800px; }
+.grid .push-eleven     { position: relative; left: 880px; }
 
 /* Pull columns */
-.grid .pull-one        { left: -80px;  }
-.grid .pull-two        { left: -160px; }
-.grid .pull-three      { left: -240px; }
-.grid .pull-four       { left: -320px; }
-.grid .pull-five       { left: -400px; }
-.grid .pull-six        { left: -480px; }
-.grid .pull-seven      { left: -560px; }
-.grid .pull-eight      { left: -640px; }
-.grid .pull-nine       { left: -720px; }
-.grid .pull-ten        { left: -800px; }
-.grid .pull-eleven     { left: -880px; }
-
+.grid .pull-one        { position: relative; left: -80px;  }
+.grid .pull-two        { position: relative; left: -160px; }
+.grid .pull-three      { position: relative; left: -240px; }
+.grid .pull-four       { position: relative; left: -320px; }
+.grid .pull-five       { position: relative; left: -400px; }
+.grid .pull-six        { position: relative; left: -480px; }
+.grid .pull-seven      { position: relative; left: -560px; }
+.grid .pull-eight      { position: relative; left: -640px; }
+.grid .pull-nine       { position: relative; left: -720px; }
+.grid .pull-ten        { position: relative; left: -800px; }
+.grid .pull-eleven     { position: relative; left: -880px; }

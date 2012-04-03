@@ -1,6 +1,6 @@
 /* 
- * Fluogrid™ Fifteen
- * Fixed-width layout with a fifteen unit grid.
+ * Fluogrid™ Twelve
+ * Fixed grid layout.
  * https://github.com/johnsolarz/fluogrid
  * Copyright 2012 8/7 Central
  */
@@ -11,31 +11,23 @@
    ========================================================================== */
 
 /*
- * Grid defines the layout area. Fifteen 44px units, 20px gutters = 960px layout.
- * Columns are made up of a number of units. Left/right margins define gutter widths.
- * Rows are horizontal divisions of similar content and are self-clearing.
+ * Grid defines the layout area. Adjust grid/unit/margin widths per design.
+ * Units are the smallest vertical measure. A column is made of a number of units.
+ * Sections are horizontal divisions of content, set to baseline grid.
  */
 
-.grid { margin: 0 auto; position: relative; width: 960px; }
-.column { display: inline; float: left; margin-left: 10px; margin-right: 10px; }
-.row { margin-bottom: 1.5em; }
+.grid                  { margin: 0 auto; position: relative; width: 960px; }
+.column                { display: inline; float: left; margin-left: 10px; margin-right: 10px; }
+.section               { margin-bottom: 1.5em; }
 
 /* Nested columns */
-.alpha { margin-left: 0; }
-.omega { margin-right: 0; }
-
-/* Push pull repositioning */
-.push-one,    .pull-one,    .push-two,    .pull-two,
-.push-three,  .pull-three,  .push-four,   .pull-four,
-.push-five,   .pull-five,   .push-six,    .pull-six,
-.push-seven,  .pull-seven,  .push-eight,  .pull-eight,
-.push-nine,   .pull-nine,   .push-ten,    .pull-ten,
-.push-eleven, .pull-eleven, .push-twelve, .pull-twelve { position: relative; }
+.column.alpha          { margin-left: 0; }
+.column.omega          { margin-right: 0; }
 
 /* Micro clearfix hack */
-.grid:before, .grid:after, .row:before, .row:after { content: ""; display: table; }
-.grid:after, .row:after { clear: both; }
-.grid, .row { *zoom: 1; }
+.grid:before, .grid:after, .section:before, .section:after { content: ""; display: table; }
+.grid:after, .section:after { clear: both; }
+.grid, .section { *zoom: 1; }
 
 /* Non-structural helper classes */
 .center { text-align: center; }
@@ -76,34 +68,33 @@
 .grid .offset-fourteen { padding-left: 896px; }
 
 /* Push columns */
-.grid .push-one        { left: 64px;  }
-.grid .push-two        { left: 128px; }
-.grid .push-three      { left: 192px; }
-.grid .push-four       { left: 256px; }
-.grid .push-five       { left: 320px; }
-.grid .push-six        { left: 384px; }
-.grid .push-seven      { left: 448px; }
-.grid .push-eight      { left: 512px; }
-.grid .push-nine       { left: 576px; }
-.grid .push-ten        { left: 640px; }
-.grid .push-eleven     { left: 704px; }
-.grid .push-twelve     { left: 768px; }
-.grid .push-thirteen   { left: 832px; }
-.grid .push-fourteen   { left: 896px; }
+.grid .push-one        { position: relative; left: 64px;  }
+.grid .push-two        { position: relative; left: 128px; }
+.grid .push-three      { position: relative; left: 192px; }
+.grid .push-four       { position: relative; left: 256px; }
+.grid .push-five       { position: relative; left: 320px; }
+.grid .push-six        { position: relative; left: 384px; }
+.grid .push-seven      { position: relative; left: 448px; }
+.grid .push-eight      { position: relative; left: 512px; }
+.grid .push-nine       { position: relative; left: 576px; }
+.grid .push-ten        { position: relative; left: 640px; }
+.grid .push-eleven     { position: relative; left: 704px; }
+.grid .push-twelve     { position: relative; left: 768px; }
+.grid .push-thirteen   { position: relative; left: 832px; }
+.grid .push-fourteen   { position: relative; left: 896px; }
 
 /* Pull columns */
-.grid .push-one        { left: -64px;  }
-.grid .push-two        { left: -128px; }
-.grid .push-three      { left: -192px; }
-.grid .push-four       { left: -256px; }
-.grid .push-five       { left: -320px; }
-.grid .push-six        { left: -384px; }
-.grid .push-seven      { left: -448px; }
-.grid .push-eight      { left: -512px; }
-.grid .push-nine       { left: -576px; }
-.grid .push-ten        { left: -640px; }
-.grid .push-eleven     { left: -704px; }
-.grid .push-twelve     { left: -768px; }
-.grid .push-thirteen   { left: -832px; }
-.grid .push-fourteen   { left: -896px; }
-
+.grid .push-one        { position: relative; left: -64px;  }
+.grid .push-two        { position: relative; left: -128px; }
+.grid .push-three      { position: relative; left: -192px; }
+.grid .push-four       { position: relative; left: -256px; }
+.grid .push-five       { position: relative; left: -320px; }
+.grid .push-six        { position: relative; left: -384px; }
+.grid .push-seven      { position: relative; left: -448px; }
+.grid .push-eight      { position: relative; left: -512px; }
+.grid .push-nine       { position: relative; left: -576px; }
+.grid .push-ten        { position: relative; left: -640px; }
+.grid .push-eleven     { position: relative; left: -704px; }
+.grid .push-twelve     { position: relative; left: -768px; }
+.grid .push-thirteen   { position: relative; left: -832px; }
+.grid .push-fourteen   { position: relative; left: -896px; }
