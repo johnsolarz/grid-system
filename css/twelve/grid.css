@@ -1,6 +1,6 @@
 /* 
- * Fluogrid™ Twelve
- * Fixed grid layout.
+ * Fluogrid™
+ * Static twelve unit grid.
  * https://github.com/johnsolarz/fluogrid
  * Copyright 2012 8/7 Central
  */
@@ -11,78 +11,251 @@
    ========================================================================== */
 
 /*
- * Grid defines the layout area. Adjust grid/unit/margin widths per design.
- * Units are the smallest vertical measure. A column is made of a number of units.
- * Sections are horizontal divisions of content, set to baseline grid.
+ * Grid defines the layout area.
+ * A column is made of a number of units.
+ * Rows are horizontal divisions of similar ontent.
  */
 
-.grid                  { margin: 0 auto; position: relative; width: 960px; }
-.column                { display: inline; float: left; margin-left: 10px; margin-right: 10px; }
-.section               { margin-bottom: 1.5em; }
+.grid {
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+}
 
-/* Nested columns */
-.column.alpha          { margin-left: 0; }
-.column.omega          { margin-right: 0; }
+.column {
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
-/* Micro clearfix hack */
-.grid:before, .grid:after, .section:before, .section:after { content: ""; display: table; }
-.grid:after, .section:after { clear: both; }
-.grid, .section { *zoom: 1; }
+.row {
+    margin-bottom: 1.5em;
+}
 
-/* Non-structural helper classes */
-.center { text-align: center; }
-.inset { padding: 1.5em; }
-.full { width: 100%; }
+/* 
+ * Nested columns 
+ */
 
-/* Units */
-.grid .one             { width: 60px;  }
-.grid .two             { width: 140px; }
-.grid .three           { width: 220px; }
-.grid .four            { width: 300px; }
-.grid .five            { width: 380px; }
-.grid .six             { width: 460px; }
-.grid .seven           { width: 540px; }
-.grid .eight           { width: 620px; }
-.grid .nine            { width: 700px; }
-.grid .ten             { width: 780px; }
-.grid .eleven          { width: 860px; }
-.grid .twelve          { width: 940px; }
+.column.alpha {
+    margin-left: 0;
+}
 
-/* Offset space */
-.grid. offset-one      { padding-left: 80px;  }
-.grid .offset-two      { padding-left: 160px; }
-.grid .offset-three    { padding-left: 240px; }
-.grid .offset-four     { padding-left: 320px; }
-.grid .offset-five     { padding-left: 400px; }
-.grid .offset-six      { padding-left: 480px; }
-.grid .offset-seven    { padding-left: 560px; }
-.grid .offset-eight    { padding-left: 640px; }
-.grid .offset-nine     { padding-left: 720px; }
-.grid .offset-ten      { padding-left: 800px; }
-.grid .offset-eleven   { padding-left: 880px; }
-	
-/* Push columns */
-.grid .push-one        { position: relative; left: 80px;  }
-.grid .push-two        { position: relative; left: 160px; }
-.grid .push-three      { position: relative; left: 240px; }
-.grid .push-four       { position: relative; left: 320px; }
-.grid .push-five       { position: relative; left: 400px; }
-.grid .push-six        { position: relative; left: 480px; }
-.grid .push-seven      { position: relative; left: 560px; }
-.grid .push-eight      { position: relative; left: 640px; }
-.grid .push-nine       { position: relative; left: 720px; }
-.grid .push-ten        { position: relative; left: 800px; }
-.grid .push-eleven     { position: relative; left: 880px; }
+.column.omega {
+    margin-right: 0;
+}
 
-/* Pull columns */
-.grid .pull-one        { position: relative; left: -80px;  }
-.grid .pull-two        { position: relative; left: -160px; }
-.grid .pull-three      { position: relative; left: -240px; }
-.grid .pull-four       { position: relative; left: -320px; }
-.grid .pull-five       { position: relative; left: -400px; }
-.grid .pull-six        { position: relative; left: -480px; }
-.grid .pull-seven      { position: relative; left: -560px; }
-.grid .pull-eight      { position: relative; left: -640px; }
-.grid .pull-nine       { position: relative; left: -720px; }
-.grid .pull-ten        { position: relative; left: -800px; }
-.grid .pull-eleven     { position: relative; left: -880px; }
+/* 
+ * Column positioning 
+ */
+ 
+[class*="push"],
+[class*="pull"] {
+    position: relative;
+}
+
+/*
+ * Fluid media 
+ */
+
+img,
+object,
+embed,
+video {
+    height: auto;
+    max-width: 100%;
+}
+
+/* 
+ * Micro clearfix hack
+ */
+
+.grid:before,
+.grid:after,
+.section:before,
+.section:after {
+    content: "";
+    display: table;
+}
+
+.grid:after,
+.section:after {
+    clear: both;
+}
+
+.grid,
+.section {
+    *zoom: 1;
+}
+
+/* 
+ * Helper classes 
+ */
+
+.center {
+    text-align: center;
+}
+
+.inset {
+    padding: 1.5em;
+}
+
+.full {
+    width: 100%;
+}
+
+
+/*
+ * Units: 60px wide, 20px gutters
+ */
+
+.one {
+    width: 60px;
+}
+.two {
+    width: 140px;
+}
+.three {
+    width: 220px;
+}
+.four {
+    width: 300px;
+}
+.five {
+    width: 380px;
+}
+.six {
+    width: 460px;
+}
+.seven {
+    width: 540px;
+}
+.eight {
+    width: 620px;
+}
+.nine {
+    width: 700px;
+}
+.ten {
+    width: 780px;
+}
+.eleven {
+    width: 860px;
+}
+.twelve {
+    width: 940px;
+}
+
+/* 
+ * Offset layout 
+ */
+
+.pad-one {
+    padding-left: 80px;
+}
+.pad-two {
+    padding-left: 160px;
+}
+.pad-three {
+    padding-left: 240px;
+}
+.pad-four {
+    padding-left: 320px
+}
+.pad-five {
+    padding-left: 400px;
+}
+.pad-six {
+    padding-left: 480px;
+}
+.pad-seven {
+    padding-left: 560px;
+}
+.pad-eight {
+    padding-left: 640px;
+}
+.pad-nine {
+    padding-left: 720px;
+}
+.pad-ten {
+    padding-left: 800px;
+}
+.pad-eleven {
+    padding-left: 880px;
+}
+
+/* 
+ * Push layout 
+ */
+
+.push-one {
+    left: 80px;
+}
+.push-two {
+    left: 160px;
+}
+.push-three {
+    left: 240px;
+}
+.push-four {
+    left: 320px;
+}
+.push-five {
+    left: 400px;
+}
+.push-six {
+    left: 480px;
+}
+.push-seven {
+    left: 560px;
+}
+.push-eight {
+    left: 640px;
+}
+.push-nine {
+    left: 720px;
+}
+.push-ten {
+    left: 800px;
+}
+.push-eleven {
+    left: 880px;
+}
+
+/* 
+ * Pull layout 
+ */
+
+.pull-one {
+    left: -80px;
+}
+.pull-two {
+    left: -160px;
+}
+.pull-three {
+    left: -240px;
+}
+.pull-four {
+    left: -320px;
+}
+.pull-five {
+    left: -400px;
+}
+.pull-six {
+    left: -480px;
+}
+.pull-seven {
+    left: -560px;
+}
+.pull-eight {
+    left: -640px;
+}
+.pull-nine {
+    left: -720px;
+}
+.pull-ten {
+    left: -800px;
+}
+.pull-eleven {
+    left: -880px;
+}

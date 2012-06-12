@@ -1,5 +1,5 @@
 /* 
- * Fluogrid™ Fifteen
+ * Fluogrid™
  * Adaptive grid layout.
  * https://github.com/johnsolarz/fluogrid
  * Copyright 2012 8/7 Central
@@ -61,7 +61,10 @@ img, object, embed, video { height: auto; max-width: 100%; }
 .grid .nine,
 .grid .ten,
 .grid .eleven,
-.grid .twelve            { width: 300px; }
+.grid .twelve,
+.grid .thirteen,
+.grid .fourteen,
+.grid .fifteen           { width: 300px; }
 
 
 /* =============================================================================

@@ -1,5 +1,5 @@
 /* 
- * Fluogrid™ Sixteen
+ * Fluogrid™
  * Adaptive grid layout.
  * https://github.com/johnsolarz/fluogrid
  * Copyright 2012 8/7 Central
@@ -47,8 +47,8 @@ img, object, embed, video { height: auto; max-width: 100%; }
  * No gutters, one unit @ 300px
  */
    
-.grid                  { width: 300px; }
-.column                { margin-left: 0; margin-right: 0; }
+.grid                    { width: 300px; }
+.column                  { margin-left: 0; margin-right: 0; }
 
 .grid .one,
 .grid .two,
@@ -61,7 +61,11 @@ img, object, embed, video { height: auto; max-width: 100%; }
 .grid .nine,
 .grid .ten,
 .grid .eleven,
-.grid .twelve          { width: 300px; }
+.grid .twelve,
+.grid .thirteen,
+.grid .fourteen,
+.grid .fifteen,
+.grid .sixteen           { width: 300px; }
 
 
 /* =============================================================================

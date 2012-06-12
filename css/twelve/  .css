@@ -1,0 +1,207 @@
+/* 
+ * Fluogrid™
+ * Responsive twelve unit grid.
+ * https://github.com/johnsolarz/fluogrid
+ * Copyright 2012 8/7 Central
+ */
+
+
+/* =============================================================================
+   The Grid System
+   ========================================================================== */
+
+/*
+ * Grid defines the layout area.
+ * A column is made of a number of units.
+ * Rows are horizontal divisions of similar content.
+ */
+
+.grid { margin: 0 auto; position: relative; }
+.column { display: inline; float: left; }
+.row { margin-bottom: 1.5em; }
+
+/* Nested columns */
+.column.alpha { margin-left: 0; }
+.column.omega { margin-right: 0; }
+
+/* Column positioning */
+[class*="push"], [class*="pull"] { position: relative; }
+
+/* Fluid media */
+img, object, embed, video { height: auto; max-width: 100%; }
+
+/* Micro clearfix hack */
+.grid:before, .grid:after, .section:before, .section:after { content: ""; display: table; }
+.grid:after, .section:after { clear: both; }
+.grid, .section { *zoom: 1; }
+
+/* Helper classes */
+.center { text-align: center; }
+.inset { padding: 1.5em; }
+.full { width: 100%; }
+
+
+/* =============================================================================
+   Base styles
+   ========================================================================== */
+
+/* 300px single column */
+.grid { width: 300px; }
+.column { margin-left: 0; margin-right: 0; }
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve { width: 300px; }
+
+
+/* =============================================================================
+   Mobile landscape
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+	/* 460px single column */
+	.grid { width: 460px; }
+	.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve { width: 460px; }
+
+}
+
+
+/* =============================================================================
+   Tablet 
+   ========================================================================== */
+
+@media only screen and (min-width: 768px) { 
+
+	/* 720px layout, 40px units, 20px gutters */
+	.grid { width: 720px; }
+	.column { margin-left: 10px; margin-right: 10px; }
+
+	.one { width: 40px; }
+	.two { width: 100px; }
+	.three { width: 160px; }
+	.four { width: 220px; }
+	.five { width: 280px; }
+	.six { width: 340px; }
+	.seven { width: 400px; }
+	.eight { width: 460px; }
+	.nine { width: 520px; }
+	.ten  { width: 580px; }
+	.eleven { width: 640px; }
+	.twelve { width: 700px; }
+
+	.pad-one { padding-left: 60px; }
+	.pad-two { padding-left: 120px; }
+	.pad-three { padding-left: 180px; }
+	.pad-four  { padding-left: 240px; }
+ 	.pad-five { padding-left: 300px; }
+ 	.pad-six { padding-left: 360px; }
+	.pad-seven { padding-left: 420px; }
+	.pad-eight { padding-left: 480px; }
+	.pad-nine { padding-left: 540px; }
+	.pad-ten { padding-left: 600px; }
+	.pad-eleven { padding-left: 660px; }
+
+	.push-one { left: 60px; }
+	.push-two { left: 120px; }
+	.push-three { left: 180px; }
+	.push-four { left: 240px; }
+	.push-five { left: 300px; }
+	.push-six { left: 360px; }
+	.push-seven { left: 420px; }
+	.push-eight { left: 480px; }
+	.push-nine { left: 540px; }
+	.push-ten { left: 600px; }
+	.push-eleven { left: 660px; }
+
+	.pull-one { left: -60px; }
+	.pull-two { left: -120px; }
+	.pull-three { left: -180px; }
+	.pull-four { left: -240px; }
+	.pull-five { left: -300px; }
+	.pull-six { left: -360px; }
+	.pull-seven { left: -420px; }
+	.pull-eight { left: -480px; }
+	.pull-nine { left: -540px; }
+	.pull-ten { left: -600px; }
+	.pull-eleven { left: -660px; }
+
+}
+
+
+/* =============================================================================
+   Landscape Tablet/Laptop
+   ========================================================================== */
+
+@media only screen and (min-width: 1024px) {
+
+	/* 960px layout, 60px units, 20px gutters */
+	.grid { width: 960px; }
+
+	.one { width: 60px; }
+	.two { width: 140px; }
+	.three { width: 220px; }
+	.four { width: 300px; }
+	.five { width: 380px; }
+	.six { width: 460px; }
+	.seven { width: 540px; }
+	.eight { width: 620px; }
+	.nine { width: 700px; }
+	.ten { width: 780px; }
+	.eleven { width: 860px; }
+	.twelve      { width: 940px; }
+
+	.pad-one { padding-left: 80px; }
+	.pad-two { padding-left: 160px; }
+	.pad-three { padding-left: 240px; }
+	.pad-four { padding-left: 320px; }
+	.pad-five { padding-left: 400px; }
+	.pad-six { padding-left: 480px; }
+	.pad-seven { padding-left: 560px; }
+	.pad-eight { padding-left: 640px; }
+	.pad-nine { padding-left: 720px; }
+	.pad-ten { padding-left: 800px; }
+	.pad-eleven { padding-left: 880px; }
+
+	.push-one { left: 80px; }
+	.push-two { left: 160px; }
+	.push-three { left: 240px; }
+	.push-four { left: 320px; }
+	.push-five { left: 400px; }
+	.push-six { left: 480px; }
+	.push-seven { left: 560px; }
+	.push-eight { left: 640px; }
+	.push-nine { left: 720px; }
+	.push-ten { left: 800px; }
+	.push-eleven { left: 880px; }
+
+	.pull-one { left: -80px; }
+	.pull-two { left: -160px; }
+	.pull-three { left: -240px; }
+	.pull-four { left: -320px; }
+	.pull-five { left: -400px; }
+	.pull-six { left: -480px; }
+	.pull-seven { left: -560px; }
+	.pull-eight { left: -640px; }
+	.pull-nine { left: -720px; }
+	.pull-ten { left: -800px; }
+	.pull-eleven { left: -880px; }
+
+}
+
+
+/* =============================================================================
+   Desktop
+   ========================================================================== */
+
+@media only screen and (min-width: 1280px) {
+
+
+}
+
+
+/* =============================================================================
+   Widescreen
+   ========================================================================== */
+
+@media only screen and (min-width: 1400px) {
+
+
+}
