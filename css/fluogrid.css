@@ -1,16 +1,17 @@
 /*
  * Fluogrid™
- * Responsive fixed-width grid system. Mobile-first ready with a 960px IE6-8 fallback.
+ * Responsive fixed-width grid. Mobile-first ready with a 960px IE6-8 fallback.
  * Copyright 2012 8/7 Central. All rights reserved.
  * https://github.com/johnsolarz/fluogrid
  *
- *    Breakpoints:
- *    Mobile Default      -   320px
- *    Mobile Landscape    -   480px
- *    Tablet              -   768px
- *    Laptop              -   960px
- *    Desktop             -   1200px
- *    Widescreen          -   1920px
+ * Breakpoints: (Adjust according to design and content)
+ *
+ *    320px  / Mobile Default      - Single Column
+ *    480px  / Mobile Landscape    - Single Column
+ *    768px  / Tablet              - Twelve Column
+ *    960px  / Laptop              - Twelve Column
+ *    1200px / Desktop             - Twelve Column
+ *    1920px / Widescreen HD       - Twelve Column
  */
 
 /* =============================================================================
@@ -18,7 +19,7 @@
    ========================================================================== */
 
 /*
- * Base container class. Grid defines the layout area.
+ * Base container class
  */
 
 .grid {
@@ -26,7 +27,7 @@
 }
 
 /*
- * Rows are horizontal divisions of similar content set to typographic baseline.
+ * Groups of columns
  */
 
 .row {
@@ -34,20 +35,7 @@
 }
 
 /*
- * Self clearing grid and rows of columns
- */
-
-.grid:after,
-.row:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-
-/*
- * Nested columns
+ * Nested columns (Alpha ~ First, Omega ~ Last)
  */
 
 .column.alpha {
@@ -57,6 +45,27 @@
     margin-right: 0;
 }
 
+/*
+ * Contain floats
+ */
+
+.grid:before,
+.grid:after,
+.row:before,
+.row:after {
+    content: "";
+    display: table;
+}
+
+.grid:after,
+.row:after {
+    clear: both;
+}
+
+.grid,
+.row {
+    *zoom: 1;
+}
 
 /* =============================================================================
    Flexible images and media
@@ -100,7 +109,7 @@ video {
 
 
 /* =============================================================================
-   IE6-8 Fallback: 960px
+   960px IE6-8 Fallback
    ========================================================================== */
 
 .lt-ie9 .grid {
@@ -208,7 +217,7 @@ video {
 
 
 /* =============================================================================
-   Mobile Default layout: 300px
+   300px / Mobile Default layout
    ========================================================================== */
 
 @media screen and (min-width:320px) {
@@ -219,7 +228,7 @@ video {
 
 
 /* =============================================================================
-   Mobile Landscape layout: 460px
+   460px / Mobile Landscape layout
    ========================================================================== */
 
 @media screen and (min-width:480px) {
@@ -230,7 +239,7 @@ video {
 
 
 /* =============================================================================
-   Tablet layout: 768px
+   768px / Tablet layout
    ========================================================================== */
 
 @media screen and (min-width:768px) {
@@ -340,7 +349,7 @@ video {
 
 
 /* =============================================================================
-   Laptop layout: 960px
+   960px / Laptop layout
    ========================================================================== */
 
 @media screen and (min-width:960px) {
@@ -447,246 +456,246 @@ video {
 
 
 /* =============================================================================
-   Desktop layout: 1200px
+   1200px / Desktop layout
    ========================================================================== */
 
 @media screen and (min-width:1200px) {
-    .ws,
+    .hd,
     .dt {
         width: 1200px;
     }
-    .ws .column,
+    .hd .column,
     .dt .column {
         width: 80px;
     }
-    .ws .offset-one,
+    .hd .offset-one,
     .dt .offset-one {
         padding-left: 100px;
     }
-    .ws .two,
+    .hd .two,
     .dt .two {
         width: 180px;
     }
-    .ws .offset-two,
+    .hd .offset-two,
     .dt .offset-two {
         padding-left: 200px;
     }
-    .ws .three,
+    .hd .three,
     .dt .three {
         width: 280px;
     }
-    .ws .offset-three,
+    .hd .offset-three,
     .dt .offset-three {
         padding-left: 300px;
     }
-    .ws .four,
+    .hd .four,
     .dt .four {
         width: 380px;
     }
-    .ws .offset-four,
+    .hd .offset-four,
     .dt .offset-four {
         padding-left: 400px;
     }
-    .ws .five,
+    .hd .five,
     .dt .five {
         width: 480px;
     }
-    .ws .offset-five,
+    .hd .offset-five,
     .dt .offset-five {
         padding-left: 500px;
     }
-    .ws .six,
+    .hd .six,
     .dt .six {
         width: 580px;
     }
-    .ws .offset-six,
+    .hd .offset-six,
     .dt .offset-six {
         padding-left: 600px;
     }
-    .ws .seven,
+    .hd .seven,
     .dt .seven {
         width: 680px;
     }
-    .ws .offset-seven,
+    .hd .offset-seven,
     .dt .offset-seven {
         padding-left: 700px;
     }
-    .ws .eight,
+    .hd .eight,
     .dt .eight {
         width: 780px;
     }
-    .ws .offset-eight,
+    .hd .offset-eight,
     .dt .offset-eight {
         padding-left: 800px;
     }
-    .ws .nine,
+    .hd .nine,
     .dt .nine {
         width: 880px;
     }
-    .ws .offset-nine,
+    .hd .offset-nine,
     .dt .offset-nine {
         padding-left: 900px;
     }
-    .ws .ten,
+    .hd .ten,
     .dt .ten {
         width: 980px;
     }
-    .ws .offset-ten,
+    .hd .offset-ten,
     .dt .offset-ten {
         padding-left: 1000px;
     }
-    .ws .eleven,
+    .hd .eleven,
     .dt .eleven {
         width: 1080px;
     }
-    .ws .offset-eleven,
+    .hd .offset-eleven,
     .dt .offset-eleven {
         padding-left: 1100px;
     }
-    .ws .twelve,
+    .hd .twelve,
     .dt .twelve {
         width: 1180px;
     }
-    .ws .one-fifth,
+    .hd .one-fifth,
     .dt .one-fifth {
         width: 220px;
     }
-    .ws .offset-one-fifth,
+    .hd .offset-one-fifth,
     .dt .offset-one-fifth {
         padding-left: 240px;
     }
-    .ws .two-fifths,
+    .hd .two-fifths,
     .dt .two-fifths {
         width: 460px;
     }
-    .ws .offset-two-fifths,
+    .hd .offset-two-fifths,
     .dt .offset-two-fifths {
         padding-left: 480px;
     }
-    .ws .three-fifths,
+    .hd .three-fifths,
     .dt .three-fifths {
         width: 700px;
     }
-    .ws .offset-three-fifths,
+    .hd .offset-three-fifths,
     .dt .offset-three-fifths {
         padding-left: 720px;
     }
-    .ws .four-fifths,
+    .hd .four-fifths,
     .dt .four-fifths {
         width: 940px;
     }
-    .ws .offset-four-fifths,
+    .hd .offset-four-fifths,
     .dt .offset-four-fifths {
         padding-left: 960px;
     }
-    .ws .five-fifths,
+    .hd .five-fifths,
     .dt .five-fifths {
         width: 1180px;
     }
 }
 
 /* =============================================================================
-   Widescreen Desktop layout: 1920px
+   1920px / Widescreen HD layout
    ========================================================================== */
 
 @media screen and (min-width:1920px) {
-    .ws {
+    .hd {
         width: 1920px;
     }
-    .ws .column {
+    .hd .column {
         width: 140px;
     }
-    .ws .offset-one {
+    .hd .offset-one {
         padding-left: 160px;
     }
-    .ws .two {
+    .hd .two {
         width: 300px;
     }
-    .ws .offset-two {
+    .hd .offset-two {
         padding-left: 320px;
     }
-    .ws .three {
+    .hd .three {
         width: 460px;
     }
-    .ws .offset-three {
+    .hd .offset-three {
         padding-left: 480px;
     }
-    .ws .four {
+    .hd .four {
         width: 620px;
     }
-    .ws .offset-four {
+    .hd .offset-four {
         padding-left: 640px;
     }
-    .ws .five {
+    .hd .five {
         width: 780px;
     }
-    .ws .offset-five {
+    .hd .offset-five {
         padding-left: 800px;
     }
-    .ws .six {
+    .hd .six {
         width: 940px;
     }
-    .ws .offset-six {
+    .hd .offset-six {
         padding-left: 960px;
     }
-    .ws .seven {
+    .hd .seven {
         width: 1100px;
     }
-    .ws .offset-seven {
+    .hd .offset-seven {
         padding-left: 1120px;
     }
-    .ws .eight {
+    .hd .eight {
         width: 1260px;
     }
-    .ws .offset-eight {
+    .hd .offset-eight {
         padding-left: 1280px;
     }
-    .ws .nine {
+    .hd .nine {
         width: 1420px;
     }
-    .ws .offset-nine {
+    .hd .offset-nine {
         padding-left: 1440px;
     }
-    .ws .ten {
+    .hd .ten {
         width: 1580px;
     }
-    .ws .offset-ten {
+    .hd .offset-ten {
         padding-left: 1600px;
     }
-    .ws .eleven {
+    .hd .eleven {
         width: 1740px;
     }
-    .ws .offset-eleven {
+    .hd .offset-eleven {
         padding-left: 1760px;
     }
-    .ws .twelve {
+    .hd .twelve {
         width: 1900px;
     }
-    .ws .one-fifth {
+    .hd .one-fifth {
         width: 364px;
     }
-    .ws .offset-one-fifth {
+    .hd .offset-one-fifth {
         padding-left: 384px;
     }
-    .ws .two-fifths {
+    .hd .two-fifths {
         width: 748px;
     }
-    .ws .offset-two-fifths {
+    .hd .offset-two-fifths {
         padding-left: 768px;
     }
-    .ws .three-fifths {
+    .hd .three-fifths {
         width: 1132px;
     }
-    .ws .offset-three-fifths {
+    .hd .offset-three-fifths {
         padding-left: 1152px;
     }
-    .ws .four-fifths {
+    .hd .four-fifths {
         width: 1516px;
     }
-    .ws .offset-four-fifths {
+    .hd .offset-four-fifths {
         padding-left: 1536px;
     }
-    .ws .five-fifths {
+    .hd .five-fifths {
         width: 1900px;
     }
 }
