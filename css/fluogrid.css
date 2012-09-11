@@ -1,17 +1,14 @@
+/*! fluogrid.css | Responsive grid | https://github.com/johnsolarz/fluogrid */
+
 /*
- * Fluogrid™
- * Responsive fixed-width grid. Mobile-first ready with a 960px IE6-8 fallback.
- * Copyright 2012 8/7 Central. All rights reserved.
- * https://github.com/johnsolarz/fluogrid
+ * Breakpoints:
  *
- * Breakpoints: (Adjust according to design and content)
- *
- *    320px  / Mobile Default      - Single Column
- *    480px  / Mobile Landscape    - Single Column
- *    768px  / Tablet              - Twelve Column
- *    960px  / Laptop              - Twelve Column
- *    1200px / Desktop             - Twelve Column
- *    1920px / Widescreen HD       - Twelve Column
+ *    320px  / Mobile Portrait                         - Single column @ 300
+ *    480px  / Mobile Landscape                        - Single column @ 460
+ *    768px  / Tablet Portrait                         - Twelve columns @ 44
+ *    960px  / Laptop and Tablet Landscape             - Twelve columns @ 60
+ *    1200px / Desktop                                 - Twelve columns @ 80
+ *    1920px / Widescreen HD                           - Twelve columns @ 140
  */
 
 /* =============================================================================
@@ -41,7 +38,6 @@
 .column.alpha {
     margin-left: 0;
 }
-
 .column.omega {
     margin-right: 0;
 }
@@ -57,12 +53,10 @@
     content: "";
     display: table;
 }
-
 .grid:after,
 .row:after {
     clear: both;
 }
-
 .grid,
 .row {
     *zoom: 1;
@@ -109,6 +103,56 @@ video {
     width: 100%;
 }
 
+
+/*
+ * Responsive utility classes
+ */
+
+/* Laptop and up */
+.visible-phone {
+  display: none !important;
+}
+.visible-tablet {
+  display: none !important;
+}
+.hidden-laptop {
+  display: none !important;
+}
+.visible-laptop {
+  display: inherit !important;
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 959px) {
+  .hidden-laptop {
+    display: inherit !important;
+  }
+  .visible-laptop {
+    display: none !important ;
+  }
+  .visible-tablet {
+    display: inherit !important;
+  }
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .hidden-laptop {
+    display: inherit !important;
+  }
+  .visible-laptop {
+    display: none !important;
+  }
+  .visible-phone {
+    display: inherit !important;
+  }
+  .hidden-phone {
+    display: none !important;
+  }
+}
 
 /* =============================================================================
    960px IE6-8 Fallback
@@ -219,7 +263,7 @@ video {
 
 
 /* =============================================================================
-   300px / Mobile Default layout
+   300px / Mobile Portrait layout
    ========================================================================== */
 
 @media screen and (min-width:320px) {
@@ -241,7 +285,7 @@ video {
 
 
 /* =============================================================================
-   768px / Tablet layout
+   768px / Tablet Portrait layout
    ========================================================================== */
 
 @media screen and (min-width:768px) {
@@ -351,7 +395,7 @@ video {
 
 
 /* =============================================================================
-   960px / Laptop layout
+   960px / Laptop and Tablet Landscape layout
    ========================================================================== */
 
 @media screen and (min-width:960px) {
