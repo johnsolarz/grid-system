@@ -260,6 +260,8 @@ video {
 @media screen and (max-width:767px) {
     .column {
         width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
     [class*="offset"] {
         padding-left: 0;
