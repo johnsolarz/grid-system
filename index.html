@@ -19,7 +19,6 @@
              -webkit-text-size-adjust: 100%;
             -ms-text-size-adjust: 100%;
         }
-
         html,
         button,
         input,
@@ -28,7 +27,6 @@
             font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
             color: #222;
         }
-
         body {
             margin: 0;
             font-size: 1em;
@@ -37,31 +35,20 @@
             font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
         }
-
         header[role="banner"] {
             margin-bottom: 3em;
             margin-top: 1.5em;
         }
-
         header[role="banner"] span {
             display: block;
             font-weight: 700;
         }
-        header[role="banner"] p {
-            font-size: .75em;
-            line-height: 2;
-            margin-bottom: 1.5em;
-            margin-top: 0;
-        }
-
         #main .row {
             background: #f0f0f0;
             border-radius: 5px;
         }
-
         #main .row .column span {
             display: block;
-            font-size: .75em;
             text-align: center;
             padding-top: 5px;
             padding-bottom: 5px;
@@ -72,30 +59,14 @@
             border-radius: 5px;
             margin-top: .5em;
         }
-
-        .oldie #main .row .column span,
         #main .row .column:first-child span {
             margin-top: 0;
         }
-
-        @media screen and (max-width:768px) {
-            #main .row .column span {
-                font-size: 1em;
-            }
-        }
-
         @media screen and (min-width:768px) {
             #main .row .column span {
                 margin-top: 0;
             }
         }
-
-        @media screen and (min-width:1200px) {
-            #main .row .column span {
-                font-size: 1em;
-            }
-        }
-
     </style>
 
     </head>
@@ -217,13 +188,13 @@
           <ul>
             <li><span class="visible-phone">&#10004; Phone</span></li>
             <li><span class="visible-tablet">&#10004; Tablet</span></li>
-            <li><span class="visible-laptop">&#10004; Laptop</span></li>
+            <li><span class="visible-desktop">&#10004; Desktop</span></li>
           </ul>
           <h4>Hidden on...</h4>
           <ul>
             <li><span class="hidden-phone">&#10004; Phone</span></li>
             <li><span class="hidden-tablet">&#10004; Tablet</span></li>
-            <li><span class="hidden-laptop">&#10004; Laptop</span></li>
+            <li><span class="hidden-desktop">&#10004; Desktop</span></li>
           </ul>
 
         </div><!-- end #main -->

@@ -1,17 +1,17 @@
-/*! fluogrid.css | Responsive grid | https://github.com/johnsolarz/fluogrid */
+/*! fluogrid.css | https://github.com/johnsolarz/fluogrid */
 
 /*
  * Breakpoints:
  *
- *    320px  / Mobile Portrait                         - Single column @ 300
- *    480px  / Mobile Landscape                        - Single column @ 460
- *    768px  / Tablet Portrait                         - Twelve columns @ 44
- *    960px  / Laptop and Tablet Landscape             - Twelve columns @ 60
- *    1200px / Desktop                                 - Twelve columns @ 80
- *    1920px / Widescreen HD                           - Twelve columns @ 140
+ *    320px  / Mobile portrait to landscape               - Single column @ 300
+ *    480px  / Mobile landscape to tablet portrait        - Single column @ 460
+ *    768px  / Tablet portrait to landscape and desktop   - Twelve columns @ 44
+ *    980px  / Default tablet landscape and desktop       - Twelve columns @ 60
+ *    1200px / Large desktop to widescreen                - Twelve columns @ 80
+ *    1920px / Widescreen HD and up                       - Twelve columns @ 140
  */
 
-/* =============================================================================
+/* ==========================================================================
    Base
    ========================================================================== */
 
@@ -62,8 +62,7 @@
     *zoom: 1;
 }
 
-
-/* =============================================================================
+/* ==========================================================================
    Flexible images and media
    ========================================================================== */
 
@@ -75,8 +74,7 @@ video {
     max-width: 100%;
 }
 
-
-/* =============================================================================
+/* ==========================================================================
    Non-semantic helper classes
    ========================================================================== */
 /*
@@ -103,31 +101,27 @@ video {
     width: 100%;
 }
 
-
 /*
- * Responsive utility classes
+ * Responsive visibility
  */
 
-/* Laptop and up */
 .visible-phone {
   display: none !important;
 }
 .visible-tablet {
   display: none !important;
 }
-.hidden-laptop {
+.hidden-desktop {
   display: none !important;
 }
-.visible-laptop {
+.visible-desktop {
   display: inherit !important;
 }
-
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 959px) {
-  .hidden-laptop {
+@media (min-width: 768px) and (max-width: 979px) {
+  .hidden-desktop {
     display: inherit !important;
   }
-  .visible-laptop {
+  .visible-desktop {
     display: none !important ;
   }
   .visible-tablet {
@@ -137,13 +131,11 @@ video {
     display: none !important;
   }
 }
-
-/* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  .hidden-laptop {
+  .hidden-desktop {
     display: inherit !important;
   }
-  .visible-laptop {
+  .visible-desktop {
     display: none !important;
   }
   .visible-phone {
@@ -154,141 +146,151 @@ video {
   }
 }
 
-/* =============================================================================
-   960px IE6-8 Fallback
+/* ==========================================================================
+   960px / Default layout and IE 6-8 fallback
    ========================================================================== */
 
-.lt-ie9 .grid {
+.grid {
     width: 960px;
 }
-.lt-ie9 .column {
+.column {
     float: left;
     margin-left: 10px;
     margin-right: 10px;
     width: 60px;
 }
-.lt-ie9 .offset-one {
+.offset-one {
     padding-left: 80px;
 }
-.lt-ie9 .two {
+.two {
     width: 140px;
 }
-.lt-ie9 .offset-two {
+.offset-two {
     padding-left: 160px;
 }
-.lt-ie9 .three {
+.three {
     width: 220px;
 }
-.lt-ie9 .offset-three {
+.offset-three {
     padding-left: 240px;
 }
-.lt-ie9 .four {
+.four {
     width: 300px;
 }
-.lt-ie9 .offset-four {
+.offset-four {
     padding-left: 320px;
 }
-.lt-ie9 .five {
+.five {
     width: 380px;
 }
-.lt-ie9 .offset-five {
+.offset-five {
     padding-left: 400px;
 }
-.lt-ie9 .six {
+.six {
     width: 460px;
 }
-.lt-ie9 .offset-six {
+.offset-six {
     padding-left: 480px;
 }
-.lt-ie9 .seven {
+.seven {
     width: 540px;
 }
-.lt-ie9 .offset-seven {
+.offset-seven {
     padding-left: 560px;
 }
-.lt-ie9 .eight {
+.eight {
     width: 620px;
 }
-.lt-ie9 .offset-eight {
+.offset-eight {
     padding-left: 640px;
 }
-.lt-ie9 .nine {
+.nine {
     width: 700px;
 }
-.lt-ie9 .offset-nine {
+.offset-nine {
     padding-left: 720px;
 }
-.lt-ie9 .ten {
+.ten {
     width: 780px;
 }
-.lt-ie9 .offset-ten {
+.offset-ten {
     padding-left: 800px;
 }
-.lt-ie9 .eleven {
+.eleven {
     width: 860px;
 }
-.lt-ie9 .offset-eleven {
+.offset-eleven {
     padding-left: 880px;
 }
-.lt-ie9 .twelve {
+.twelve {
     width: 940px;
 }
-.lt-ie9 .one-fifth {
+.one-fifth {
     width: 172px;
 }
-.lt-ie9 .offset-one-fifth {
+.offset-one-fifth {
     padding-left: 192px;
 }
-.lt-ie9 .two-fifths {
+.two-fifths {
     width: 364px;
 }
-.lt-ie9 .offset-two-fifths {
+.offset-two-fifths {
     padding-left: 384px;
 }
-.lt-ie9 .three-fifths {
+.three-fifths {
     width: 556px;
 }
-.lt-ie9 .offset-three-fifths {
+.offset-three-fifths {
     padding-left: 576px;
 }
-.lt-ie9 .four-fifths {
+.four-fifths {
     width: 748px;
 }
-.lt-ie9 .offset-four-fifths {
+.offset-four-fifths {
     padding-left: 768px;
 }
-.lt-ie9 .five-fifths {
+.five-fifths {
     width: 940px;
 }
 
-
-/* =============================================================================
-   300px / Mobile Portrait layout
+/* ==========================================================================
+   Mobile all
    ========================================================================== */
 
-@media screen and (min-width:320px) {
+@media screen and (max-width:767px) {
+    .column {
+        width: 100%;
+    }
+    [class*="offset"] {
+        padding-left: 0;
+    }
+}
+
+/* ==========================================================================
+   320px / Mobile portrait to landscape
+   ========================================================================== */
+
+@media screen and (max-width:479px) {
     .grid {
         width: 300px;
     }
 }
 
-
-/* =============================================================================
-   460px / Mobile Landscape layout
+/* ==========================================================================
+   480px / Mobile landscape to tablet portrait
    ========================================================================== */
 
-@media screen and (min-width:480px) {
+@media screen and (min-width:480px) and (max-width:767px) {
     .grid {
         width: 460px;
     }
 }
 
-
-/* =============================================================================
-   768px / Tablet Portrait layout
+/* ==========================================================================
+   768px / Tablet portrait to landscape and desktop
    ========================================================================== */
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:768px) and (max-width:979px) {
     .grid {
         width: 768px;
     }
@@ -393,116 +395,8 @@ video {
     }
 }
 
-
-/* =============================================================================
-   960px / Laptop and Tablet Landscape layout
-   ========================================================================== */
-
-@media screen and (min-width:960px) {
-    .grid {
-        width: 960px;
-    }
-    .column {
-        width: 60px;
-    }
-    .offset-one {
-        padding-left: 80px;
-    }
-    .two {
-        width: 140px;
-    }
-    .offset-two {
-        padding-left: 160px;
-    }
-    .three {
-        width: 220px;
-    }
-    .offset-three {
-        padding-left: 240px;
-    }
-    .four {
-        width: 300px;
-    }
-    .offset-four {
-        padding-left: 320px;
-    }
-    .five {
-        width: 380px;
-    }
-    .offset-five {
-        padding-left: 400px;
-    }
-    .six {
-        width: 460px;
-    }
-    .offset-six {
-        padding-left: 480px;
-    }
-    .seven {
-        width: 540px;
-    }
-    .offset-seven {
-        padding-left: 560px;
-    }
-    .eight {
-        width: 620px;
-    }
-    .offset-eight {
-        padding-left: 640px;
-    }
-    .nine {
-        width: 700px;
-    }
-    .offset-nine {
-        padding-left: 720px;
-    }
-    .ten {
-        width: 780px;
-    }
-    .offset-ten {
-        padding-left: 800px;
-    }
-    .eleven {
-        width: 860px;
-    }
-    .offset-eleven {
-        padding-left: 880px;
-    }
-    .twelve {
-        width: 940px;
-    }
-    .one-fifth {
-        width: 172px;
-    }
-    .offset-one-fifth {
-        padding-left: 192px;
-    }
-    .two-fifths {
-        width: 364px;
-    }
-    .offset-two-fifths {
-        padding-left: 384px;
-    }
-    .three-fifths {
-        width: 556px;
-    }
-    .offset-three-fifths {
-        padding-left: 576px;
-    }
-    .four-fifths {
-        width: 748px;
-    }
-    .offset-four-fifths {
-        padding-left: 768px;
-    }
-    .five-fifths {
-        width: 940px;
-    }
-}
-
-
-/* =============================================================================
-   1200px / Desktop layout
+/* ==========================================================================
+   1200px / Large desktop to widescreen
    ========================================================================== */
 
 @media screen and (min-width:1200px) {
@@ -512,6 +406,9 @@ video {
     }
     .hd .column,
     .dt .column {
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
         width: 80px;
     }
     .hd .offset-one,
@@ -640,8 +537,8 @@ video {
     }
 }
 
-/* =============================================================================
-   1920px / Widescreen HD layout
+/* ==========================================================================
+   1920px / Widescreen HD and up
    ========================================================================== */
 
 @media screen and (min-width:1920px) {
