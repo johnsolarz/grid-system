@@ -1,4 +1,4 @@
-/*! fluogrid.css | https://github.com/johnsolarz/fluogrid */.grid{margin:0 auto}.row{margin-bottom:1.5em}.column.alpha{margin-left:0}.column.omega{margin-right:0}.grid:before,.grid:after,.row:before,.row:after{content:"";display:table}
+/*! fluogrid.css | https://github.com/johnsolarz/fluogrid */.grid{margin:0 auto}.row{margin-bottom:1.5em}.column.alpha{margin-left:0}.column.omega{margin-right:0}.grid:before,.grid:after,.row:before,.row:after{content:" ";display:table}
 .grid:after,.row:after{clear:both}.grid,.row{*zoom:1}img,object,embed,video{height:auto;max-width:100%}.center{text-align:center}.inset{margin:1.5em}.full{width:100%}
 .visible-phone{display:none!important}.visible-tablet{display:none!important}.hidden-desktop{display:none!important}.visible-desktop{display:inherit!important}
 @media(min-width:768px) and (max-width:979px){.hidden-desktop{display:inherit!important}.visible-desktop{display:none!important}.visible-tablet{display:inherit!important}
