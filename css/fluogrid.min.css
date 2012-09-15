@@ -9,14 +9,14 @@
 .eight{width:620px}.offset-eight{padding-left:640px}.nine{width:700px}.offset-nine{padding-left:720px}.ten{width:780px}.offset-ten{padding-left:800px}
 .eleven{width:860px}.offset-eleven{padding-left:880px}.twelve{width:940px}.one-fifth{width:172px}.offset-one-fifth{padding-left:192px}.two-fifths{width:364px}
 .offset-two-fifths{padding-left:384px}.three-fifths{width:556px}.offset-three-fifths{padding-left:576px}.four-fifths{width:748px}.offset-four-fifths{padding-left:768px}
-.five-fifths{width:940px}@media screen and (max-width:767px){.column{width:100%;margin-left:0;margin-right:0}[class*="offset"]{padding-left:0}
+.five-fifths{width:940px}@media screen and (max-width:767px){.column{float:none;margin-left:0;margin-right:0;width:100%}[class*="offset"]{padding-left:0}
 }@media screen and (max-width:479px){.grid{width:300px}}@media screen and (min-width:480px) and (max-width:767px){.grid{width:460px}}@media screen and (min-width:768px) and (max-width:979px){.grid{width:768px}
 .column{float:left;margin-left:10px;margin-right:10px;width:44px}.offset-one{padding-left:64px}.two{width:108px}.offset-two{padding-left:128px}.three{width:172px}
 .offset-three{padding-left:192px}.four{width:236px}.offset-four{padding-left:256px}.five{width:300px}.offset-five{padding-left:320px}.six{width:364px}
 .offset-six{padding-left:384px}.seven{width:428px}.offset-seven{padding-left:448px}.eight{width:492px}.offset-eight{padding-left:512px}.nine{width:556px}
 .offset-nine{padding-left:576px}.ten{width:620px}.offset-ten{padding-left:640px}.eleven{width:684px}.offset-eleven{padding-left:704px}.twelve{width:748px}
 .one-fifth{width:133px}.offset-one-fifth{padding-left:153px}.two-fifths{width:286px}.offset-two-fifths{padding-left:306px}.three-fifths{width:439px}.offset-three-fifths{padding-left:459px}
-.four-fifths{width:592px}.offset-four-fifths{padding-left:612px}.five-fifths{width:745px}}@media screen and (min-width:1200px){.hd,.dt{width:1200px}.hd .column,.dt .column{float:left;margin-left:10px;margin-right:10px;width:80px}
+.four-fifths{width:592px}.offset-four-fifths{padding-left:612px}.five-fifths{width:745px}}@media screen and (min-width:1200px){.hd,.dt{width:1200px}.hd .column,.dt .column{width:80px}
 .hd .offset-one,.dt .offset-one{padding-left:100px}.hd .two,.dt .two{width:180px}.hd .offset-two,.dt .offset-two{padding-left:200px}.hd .three,.dt .three{width:280px}
 .hd .offset-three,.dt .offset-three{padding-left:300px}.hd .four,.dt .four{width:380px}.hd .offset-four,.dt .offset-four{padding-left:400px}.hd .five,.dt .five{width:480px}
 .hd .offset-five,.dt .offset-five{padding-left:500px}.hd .six,.dt .six{width:580px}.hd .offset-six,.dt .offset-six{padding-left:600px}.hd .seven,.dt .seven{width:680px}

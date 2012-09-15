@@ -39,10 +39,7 @@
             margin-bottom: 3em;
             margin-top: 1.5em;
         }
-        header[role="banner"] span {
-            display: block;
-            font-weight: 700;
-        }
+
         #main .row {
             background: #f0f0f0;
             border-radius: 5px;
@@ -62,6 +59,9 @@
         #main .row .column:first-child span {
             margin-top: 0;
         }
+        .nested span {
+            margin-bottom: 10px;
+        }
         @media screen and (min-width:768px) {
             #main .row .column span {
                 margin-top: 0;
@@ -74,7 +74,7 @@
     <body class="demo">
         <header role="banner" class="grid hd">
             <div class="twelve column">
-                <span>Fluogrid™</span>
+                <h1>Fluogrid™</h1>
                 &mdash;
                 <p>Responsive fixed-width grid. Mobile-first ready with a 960px IE6-8 fallback.</p>
             </div>
@@ -180,24 +180,34 @@
                 <div class="column two-fifths"><span>two-fifths</span></div>
                 <div class="column two-fifths offset-one-fifth"><span>two-fifths offset-one-fifth</span></div>
             </div>
-
-
-          <h3>Responsive utility classes</h3>
-          <p>Resize your browser or load on different devices to test the above classes.</p>
-          <h4>Visible on...</h4>
-          <ul>
-            <li><span class="visible-phone">&#10004; Phone</span></li>
-            <li><span class="visible-tablet">&#10004; Tablet</span></li>
-            <li><span class="visible-desktop">&#10004; Desktop</span></li>
-          </ul>
-          <h4>Hidden on...</h4>
-          <ul>
-            <li><span class="hidden-phone">&#10004; Phone</span></li>
-            <li><span class="hidden-tablet">&#10004; Tablet</span></li>
-            <li><span class="hidden-desktop">&#10004; Desktop</span></li>
-          </ul>
+            <div class="row">
+                <div class="column twelve nested"><span>twelve</span>
+                    <div class="eight column alpha"><span>eight alpha</span></div>
+                    <div class="four column omega"><span>four omega</span></div>
+                </div>
+            </div>
 
         </div><!-- end #main -->
+
+        <footer class="grid hd">
+            <div class="twelve column">
+                <h3>Responsive utility classes</h3>
+                <p>Resize your browser or load on different devices to test the above classes.</p>
+                <h4>Visible on...</h4>
+                <ul>
+                  <li><span class="visible-phone">&#10004; Phone</span></li>
+                  <li><span class="visible-tablet">&#10004; Tablet</span></li>
+                  <li><span class="visible-desktop">&#10004; Desktop</span></li>
+                </ul>
+                <h4>Hidden on...</h4>
+                <ul>
+                  <li><span class="hidden-phone">&#10004; Phone</span></li>
+                  <li><span class="hidden-tablet">&#10004; Tablet</span></li>
+                  <li><span class="hidden-desktop">&#10004; Desktop</span></li>
+                </ul>
+            </div>
+        </footer>
+
 
          <!--[if !IE]>
           <!-- Fix for the iOS viewport scaling bug. https://gist.github.com/901295 -->

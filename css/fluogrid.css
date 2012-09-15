@@ -77,34 +77,16 @@ video {
 /* ==========================================================================
    Non-semantic helper classes
    ========================================================================== */
-/*
- * Center-align text
- */
 
 .center {
     text-align: center;
 }
-
-/*
- * Inset elements inside columns
- */
-
 .inset {
     margin: 1.5em;
 }
-
-/*
- * Full-width elements
- */
-
 .full {
     width: 100%;
 }
-
-/*
- * Responsive visibility
- */
-
 .visible-phone {
   display: none !important;
 }
@@ -259,9 +241,10 @@ video {
 
 @media screen and (max-width:767px) {
     .column {
-        width: 100%;
+        float: none;
         margin-left: 0;
         margin-right: 0;
+        width: 100%;
     }
     [class*="offset"] {
         padding-left: 0;
@@ -408,9 +391,6 @@ video {
     }
     .hd .column,
     .dt .column {
-        float: left;
-        margin-left: 10px;
-        margin-right: 10px;
         width: 80px;
     }
     .hd .offset-one,
