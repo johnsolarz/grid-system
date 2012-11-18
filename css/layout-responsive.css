@@ -6,7 +6,7 @@
  *    320px  / Mobile portrait to landscape               - Single column @ 300
  *    480px  / Mobile landscape to tablet portrait        - Single column @ 460
  *    768px  / Tablet portrait to landscape and desktop   - Twelve columns @ 44
- *    980px  / Default tablet landscape and desktop       - Twelve columns @ 60
+ *    980px  / Default tablet and desktop in layout.css   - Twelve columns @ 60
  *    1200px / Large desktop to widescreen                - Twelve columns @ 80
  *    1920px / Widescreen HD and up                       - Twelve columns @ 140
  */
@@ -24,55 +24,55 @@ video {
 }
 
 /* ==========================================================================
-   Resposive visibbility
+   Resposive utility classes
    ========================================================================== */
 
 .visible-phone {
-  display: none !important;
+    display: none !important;
 }
 .visible-tablet {
-  display: none !important;
+    display: none !important;
 }
 .hidden-desktop {
-  display: none !important;
+    display: none !important;
 }
 .visible-desktop {
-  display: inherit !important;
+    display: inherit !important;
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  .hidden-desktop {
-    display: inherit !important;
-  }
-  .visible-desktop {
-    display: none !important ;
-  }
-  .visible-tablet {
-    display: inherit !important;
-  }
-  .hidden-tablet {
-    display: none !important;
-  }
+    .hidden-desktop {
+        display: inherit !important;
+      }
+    .visible-desktop {
+        display: none !important ;
+    }
+    .visible-tablet {
+        display: inherit !important;
+    }
+    .hidden-tablet {
+        display: none !important;
+    }
 }
 @media (max-width: 767px) {
-  .hidden-desktop {
-    display: inherit !important;
-  }
-  .visible-desktop {
-    display: none !important;
-  }
-  .visible-phone {
-    display: inherit !important;
-  }
-  .hidden-phone {
-    display: none !important;
-  }
+    .hidden-desktop {
+        display: inherit !important;
+    }
+    .visible-desktop {
+        display: none !important;
+    }
+    .visible-phone {
+        display: inherit !important;
+    }
+    .hidden-phone {
+        display: none !important;
+    }
 }
 
 /* ==========================================================================
    Mobile all
    ========================================================================== */
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
     .column {
         float: none;
         margin-left: 0;
@@ -88,7 +88,7 @@ video {
    320px / Mobile portrait to landscape
    ========================================================================== */
 
-@media screen and (max-width:479px) {
+@media screen and (max-width: 479px) {
     .container {
         width: 300px;
     }
@@ -98,7 +98,7 @@ video {
    480px / Mobile landscape to tablet portrait
    ========================================================================== */
 
-@media screen and (min-width:480px) and (max-width:767px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
     .container {
         width: 460px;
     }
@@ -108,108 +108,108 @@ video {
    768px / Tablet portrait to landscape and desktop
    ========================================================================== */
 
-@media screen and (min-width:768px) and (max-width:979px) {
+@media screen and (min-width: 768px) and (max-width: 979px) {
     .container {
-        width: 768px;
+        width: 744px;
     }
     .column {
         float: left;
         margin-left: 10px;
         margin-right: 10px;
-        width: 44px;
+        width: 42px;
     }
     .offset-one {
-        padding-left: 64px;
+        padding-left: 62px;
     }
     .two {
-        width: 108px;
+        width: 104px;
     }
     .offset-two {
-        padding-left: 128px;
+        padding-left: 124px;
     }
     .three {
-        width: 172px;
+        width: 166px;
     }
     .offset-three {
-        padding-left: 192px;
+        padding-left: 186px;
     }
     .four {
-        width: 236px;
+        width: 228px;
     }
     .offset-four {
-        padding-left: 256px;
+        padding-left: 248px;
     }
     .five {
-        width: 300px;
+        width: 290px;
     }
     .offset-five {
-        padding-left: 320px;
+        padding-left: 310px;
     }
     .six {
-        width: 364px;
+        width: 352px;
     }
     .offset-six {
-        padding-left: 384px;
+        padding-left: 372px;
     }
     .seven {
-        width: 428px;
+        width: 414px;
     }
     .offset-seven {
-        padding-left: 448px;
+        padding-left: 434px;
     }
     .eight {
-        width: 492px;
+        width: 476px;
     }
     .offset-eight {
-        padding-left: 512px;
+        padding-left: 496px;
     }
     .nine {
-        width: 556px;
+        width: 538px;
     }
     .offset-nine {
-        padding-left: 576px;
+        padding-left: 558px;
     }
     .ten {
-        width: 620px;
+        width: 600px;
     }
     .offset-ten {
-        padding-left: 640px;
+        padding-left: 620px;
     }
     .eleven {
-        width: 684px;
+        width: 662px;
     }
     .offset-eleven {
-        padding-left: 704px;
+        padding-left: 682px;
     }
     .twelve {
-        width: 748px;
+        width: 724px;
     }
     .one-fifth {
-        width: 133px;
+        width: 128px;
     }
     .offset-one-fifth {
-        padding-left: 153px;
+        padding-left: 148px;
     }
     .two-fifths {
-        width: 286px;
+        width: 277px;
     }
     .offset-two-fifths {
-        padding-left: 306px;
+        padding-left: 297px;
     }
     .three-fifths {
-        width: 439px;
+        width: 426px;
     }
     .offset-three-fifths {
-        padding-left: 459px;
+        padding-left: 446px;
     }
     .four-fifths {
-        width: 592px;
+        width: 575px;
     }
     .offset-four-fifths {
-        padding-left: 612px;
+        padding-left: 595px;
     }
     .five-fifths {
-        width: 745px;
+        width: 724px;
     }
 }
 
@@ -217,9 +217,9 @@ video {
    1200px / Large desktop to widescreen
    ========================================================================== */
 
-@media screen and (min-width:1200px) {
-    .hd,
-    .dt {
+@media screen and (min-width: 1200px) {
+    .container.hd,
+    .container.dt {
         width: 1200px;
     }
     .hd .column,
@@ -356,104 +356,112 @@ video {
    1920px / Widescreen HD and up
    ========================================================================== */
 
-@media screen and (min-width:1920px) {
-    .hd {
+@media screen and (min-width: 1920px) {
+    .container.hd {
         width: 1920px;
     }
     .hd .column {
-        width: 140px;
+        margin-left: 15px;
+        margin-right: 15px;
+        width: 130px;
+    }
+    .hd .column.alpha {
+        margin-left: 0;
+    }
+    .hd .column.omega {
+        margin-right: 0;
     }
     .hd .offset-one {
         padding-left: 160px;
     }
     .hd .two {
-        width: 300px;
+        width: 290px;
     }
     .hd .offset-two {
         padding-left: 320px;
     }
     .hd .three {
-        width: 460px;
+        width: 450px;
     }
     .hd .offset-three {
         padding-left: 480px;
     }
     .hd .four {
-        width: 620px;
+        width: 610px;
     }
     .hd .offset-four {
         padding-left: 640px;
     }
     .hd .five {
-        width: 780px;
+        width: 770px;
     }
     .hd .offset-five {
         padding-left: 800px;
     }
     .hd .six {
-        width: 940px;
+        width: 930px;
     }
     .hd .offset-six {
         padding-left: 960px;
     }
     .hd .seven {
-        width: 1100px;
+        width: 1090px;
     }
     .hd .offset-seven {
         padding-left: 1120px;
     }
     .hd .eight {
-        width: 1260px;
+        width: 1250px;
     }
     .hd .offset-eight {
         padding-left: 1280px;
     }
     .hd .nine {
-        width: 1420px;
+        width: 1410px;
     }
     .hd .offset-nine {
         padding-left: 1440px;
     }
     .hd .ten {
-        width: 1580px;
+        width: 1570px;
     }
     .hd .offset-ten {
         padding-left: 1600px;
     }
     .hd .eleven {
-        width: 1740px;
+        width: 1730px;
     }
     .hd .offset-eleven {
         padding-left: 1760px;
     }
     .hd .twelve {
-        width: 1900px;
+        width: 1890px;
     }
     .hd .one-fifth {
-        width: 364px;
+        width: 354px;
     }
     .hd .offset-one-fifth {
         padding-left: 384px;
     }
     .hd .two-fifths {
-        width: 748px;
+        width: 738px;
     }
     .hd .offset-two-fifths {
         padding-left: 768px;
     }
     .hd .three-fifths {
-        width: 1132px;
+        width: 1122px;
     }
     .hd .offset-three-fifths {
         padding-left: 1152px;
     }
     .hd .four-fifths {
-        width: 1516px;
+        width: 1506px;
     }
     .hd .offset-four-fifths {
         padding-left: 1536px;
     }
     .hd .five-fifths {
-        width: 1900px;
+        width: 1890px;
     }
 }
