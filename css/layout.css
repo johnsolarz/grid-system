@@ -1,0 +1,190 @@
+/*! layout.css | Twelve unit container | https://github.com/johnsolarz/layout */
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * Base container class
+ */
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+}
+
+/*
+ * Groups of columns
+ */
+
+.row {
+    margin-bottom: 1.5em;
+}
+
+/*
+ * Nested columns (Alpha ~ First, Omega ~ Last)
+ */
+
+.column.alpha {
+    margin-left: 0;
+}
+
+.column.omega {
+    margin-right: 0;
+}
+
+/*
+ * Contain floats
+ */
+
+.container:before,
+.container:after,
+.row:before,
+.row:after {
+    content: "";
+    display: table;
+}
+
+.container:after,
+.row:after {
+    clear: both;
+}
+
+.container,
+.row {
+    *zoom: 1;
+}
+
+
+/* =============================================================================
+   Non-semantic helper classes
+   ========================================================================== */
+/*
+ * Center-align text
+ */
+
+.center {
+    text-align: center;
+}
+
+/*
+ * Inset elements inside columns
+ */
+
+.inset {
+    margin: 1.5em;
+}
+
+/*
+ * Full-width elements
+ */
+
+.full {
+    width: 100%;
+}
+
+
+/* =============================================================================
+   960px / Default layout and IE 6-8 fallback
+   ========================================================================== */
+
+.column {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 60px;
+}
+.offset-one {
+    padding-left: 80px;
+}
+.two {
+    width: 140px;
+}
+.offset-two {
+    padding-left: 160px;
+}
+.three {
+    width: 220px;
+}
+.offset-three {
+    padding-left: 240px;
+}
+.four {
+    width: 300px;
+}
+.offset-four {
+    padding-left: 320px;
+}
+.five {
+    width: 380px;
+}
+.offset-five {
+    padding-left: 400px;
+}
+.six {
+    width: 460px;
+}
+.offset-six {
+    padding-left: 480px;
+}
+.seven {
+    width: 540px;
+}
+.offset-seven {
+    padding-left: 560px;
+}
+.eight {
+    width: 620px;
+}
+.offset-eight {
+    padding-left: 640px;
+}
+.nine {
+    width: 700px;
+}
+.offset-nine {
+    padding-left: 720px;
+}
+.ten {
+    width: 780px;
+}
+.offset-ten {
+    padding-left: 800px;
+}
+.eleven {
+    width: 860px;
+}
+.offset-eleven {
+    padding-left: 880px;
+}
+.twelve {
+    width: 940px;
+}
+.one-fifth {
+    width: 172px;
+}
+.offset-one-fifth {
+    padding-left: 192px;
+}
+.two-fifths {
+    width: 364px;
+}
+.offset-two-fifths {
+    padding-left: 384px;
+}
+.three-fifths {
+    width: 556px;
+}
+.offset-three-fifths {
+    padding-left: 576px;
+}
+.four-fifths {
+    width: 748px;
+}
+.offset-four-fifths {
+    padding-left: 768px;
+}
+.five-fifths {
+    width: 940px;
+}
