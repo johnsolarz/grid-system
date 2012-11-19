@@ -1,4 +1,4 @@
-/*! layout-responsive.css | https://github.com/johnsolarz/layout */
+/*! grid-responsive.css | https://github.com/johnsolarz/layout */
 
 /*
  * Breakpoints:
@@ -173,8 +173,8 @@ video {
    ========================================================================== */
 
 @media screen and (min-width: 1200px) {
-    .container.hd,
-    .container.dt {
+    .hd,
+    .dt {
         width: 1200px;
     }
     .hd .column,
@@ -312,7 +312,7 @@ video {
    ========================================================================== */
 
 @media screen and (min-width: 1920px) {
-    .container.hd {
+    .hd {
         width: 1920px;
     }
     .hd .column {
