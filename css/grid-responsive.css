@@ -1,4 +1,4 @@
-/*! grid-responsive.css | https://github.com/johnsolarz/layout */
+/*! grid-responsive.css | https://github.com/johnsolarz/grid */
 
 /*
  * Breakpoints:
@@ -6,7 +6,7 @@
  *    320px  / Mobile portrait to landscape               - Single column @ 300
  *    480px  / Mobile landscape to tablet portrait        - Single column @ 460
  *    768px  / Tablet portrait to landscape and desktop   - Twelve columns @ 44
- *    980px  / Default tablet and desktop in layout.css   - Twelve columns @ 60
+ *    980px  / Default tablet and desktop in grid.css     - Twelve columns @ 60
  *    1200px / Large desktop to widescreen                - Twelve columns @ 80
  *    1920px / Widescreen HD and up                       - Twelve columns @ 140
  */
