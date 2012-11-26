@@ -34,36 +34,43 @@
             font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
         }
-        header[role="banner"] {
+        div.header{
+            display: block;
             margin-bottom: 3em;
             margin-top: 1.5em;
         }
 
         #main .row {
-            background: #f0f0f0;
+            background: #ddd;
             border-radius: 5px;
         }
         #main .row .column span {
+            border-radius: 5px;
             display: block;
             text-align: center;
             padding-top: 5px;
             padding-bottom: 5px;
             background: #222;
             color: #fff;
-            font-weight: normal;
+            font-weight: 700;
             text-shadow: 0 -1px 1px black;
-            border-radius: 5px;
-            margin-top: .5em;
-        }
-        #main .row .column:first-child span {
-            margin-top: 0;
         }
         .nested span {
             margin-bottom: 1.5em;
         }
-        @media screen and (min-width:768px) {
+        @media screen and (max-width:768px) {
             #main .row .column span {
-                margin-top: 0;
+                border-radius: 5px;
+                margin-bottom: .5em;
+            }
+            #main .row .column:last-child span {
+                margin-bottom: 0;
+            }
+            #main .row .column.nested span {
+                margin-bottom: .5em;
+            }
+            #main .row .column.nested .omega span {
+                margin-bottom: 0;
             }
         }
     </style>
@@ -71,122 +78,122 @@
     </head>
 
     <body class="demo">
-        <header role="banner" class="container hd">
+        <div role="banner" class="header container hd">
             <div class="twelve column">
-                <h1>Layout</h1>
+                <h1>Grid System<sup>12</sup></h1>
                 &mdash;
-                <p>Responsive fixed-width container. Mobile-first ready with a 960px IE6-8 fallback.</p>
+                <p>Fixed-width + responsive grid, mobile-first ready with an IE 6-8 fallback.</p>
             </div>
-        </header>
+        </div>
 
         <div class="container hd" id="main">
 
             <div class="row">
-                <div class="column"><span>one</span></div>
-                <div class="column"><span>one</span></div>
-                <div class="column"><span>one</span></div>
-                <div class="column"><span>one</span></div>
-                <div class="column"><span>one</span></div>
-                <div class="column"><span>one</span></div>
-                <div class="column"><span>one</span></div>
-                <div class="column"><span>one</span></div>
-                <div class="column"><span>one</span></div>
-                <div class="column"><span>one</span></div>
-                <div class="column"><span>one</span></div>
-                <div class="column"><span>one</span></div>
+                <div class="column"><span>1</span></div>
+                <div class="column"><span>1</span></div>
+                <div class="column"><span>1</span></div>
+                <div class="column"><span>1</span></div>
+                <div class="column"><span>1</span></div>
+                <div class="column"><span>1</span></div>
+                <div class="column"><span>1</span></div>
+                <div class="column"><span>1</span></div>
+                <div class="column"><span>1</span></div>
+                <div class="column"><span>1</span></div>
+                <div class="column"><span>1</span></div>
+                <div class="column"><span>1</span></div>
             </div>
 
             <div class="row">
-                <div class="two column"><span>two</span></div>
-                <div class="two column"><span>two</span></div>
-                <div class="two column"><span>two</span></div>
-                <div class="two column"><span>two</span></div>
-                <div class="two column"><span>two</span></div>
-                <div class="two column"><span>two</span></div>
+                <div class="two column"><span>2</span></div>
+                <div class="two column"><span>2</span></div>
+                <div class="two column"><span>2</span></div>
+                <div class="two column"><span>2</span></div>
+                <div class="two column"><span>2</span></div>
+                <div class="two column"><span>2</span></div>
             </div>
 
             <div class="row">
-                <div class="column three"><span>three</span></div>
-                <div class="column three"><span>three</span></div>
-                <div class="column three"><span>three</span></div>
-                <div class="column three"><span>three</span></div>
+                <div class="column three"><span>3</span></div>
+                <div class="column three"><span>3</span></div>
+                <div class="column three"><span>3</span></div>
+                <div class="column three"><span>3</span></div>
             </div>
 
             <div class="row">
-                <div class="column four"><span>four</span></div>
-                <div class="column four"><span>four</span></div>
-                <div class="column four"><span>four</span></div>
+                <div class="column four"><span>4</span></div>
+                <div class="column four"><span>4</span></div>
+                <div class="column four"><span>4</span></div>
             </div>
 
             <div class="row">
-                <div class="column five"><span>five</span></div>
-                <div class="column seven"><span>seven</span></div>
+                <div class="column five"><span>5</span></div>
+                <div class="column seven"><span>7</span></div>
             </div>
 
             <div class="row">
-                <div class="column six"><span>six</span></div>
-                <div class="column six"><span>six</span></div>
+                <div class="column six"><span>6</span></div>
+                <div class="column six"><span>6</span></div>
             </div>
 
             <div class="row">
-                <div class="column seven"><span>seven</span></div>
-                <div class="column five"><span>five</span></div>
+                <div class="column seven"><span>7</span></div>
+                <div class="column five"><span>5</span></div>
             </div>
 
             <div class="row">
-                <div class="column eight"><span>eight</span></div>
-                <div class="column four"><span>four</span></div>
+                <div class="column eight"><span>8</span></div>
+                <div class="column four"><span>4</span></div>
             </div>
 
             <div class="row">
-                <div class="column nine"><span>nine</span></div>
-                <div class="column three"><span>three</span></div>
+                <div class="column nine"><span>9</span></div>
+                <div class="column three"><span>3</span></div>
             </div>
 
             <div class="row">
-                <div class="column ten"><span>ten</span></div>
-                <div class="two column"><span>two</span></div>
+                <div class="column ten"><span>10</span></div>
+                <div class="two column"><span>2</span></div>
             </div>
 
             <div class="row">
-                <div class="column eleven"><span>eleven</span></div>
-                <div class="column"><span>one</span></div>
+                <div class="column eleven"><span>11</span></div>
+                <div class="column"><span>1</span></div>
             </div>
 
             <div class="row">
-                <div class="two column offset-one"><span>two offset-one</span></div>
-                <div class="column eight"><span>eight</span></div>
+                <div class="two column offset-one"><span>2 offset-1</span></div>
+                <div class="column eight"><span>8</span></div>
             </div>
 
             <div class="row">
-                <div class="two column"><span>two</span></div>
-                <div class="column eight"><span>eight</span></div>
-                <div class="two column"><span>two</span></div>
+                <div class="two column"><span>2</span></div>
+                <div class="column eight"><span>8</span></div>
+                <div class="two column"><span>2</span></div>
             </div>
 
             <div class="row">
-                <div class="column one-fifth"><span>one-fifth</span></div>
-                <div class="column one-fifth"><span>one-fifth</span></div>
-                <div class="column one-fifth"><span>one-fifth</span></div>
-                <div class="column one-fifth"><span>one-fifth</span></div>
-                <div class="column one-fifth"><span>one-fifth</span></div>
+                <div class="column one-fifth"><span>1/5th</span></div>
+                <div class="column one-fifth"><span>1/5th</span></div>
+                <div class="column one-fifth"><span>1/5th</span></div>
+                <div class="column one-fifth"><span>1/5th</span></div>
+                <div class="column one-fifth"><span>1/5th</span></div>
             </div>
             <div class="row">
-                <div class="column two-fifths"><span>two-fifths</span></div>
-                <div class="column three-fifths"><span>three-fifths</span></div>
+                <div class="column two-fifths"><span>2/5ths</span></div>
+                <div class="column three-fifths"><span>3/5ths</span></div>
             </div>
             <div class="row">
-                <div class="column two-fifths"><span>two-fifths</span></div>
-                <div class="column two-fifths offset-one-fifth"><span>two-fifths offset-one-fifth</span></div>
+                <div class="column two-fifths"><span>2/5ths</span></div>
+                <div class="column two-fifths offset-one-fifth"><span>2/5ths offset-1/5th</span></div>
             </div>
             <div class="row">
-                <div class="column one-fifth"><span>one-fifths</span></div>
-                <div class="column four-fifths"><span>four-fifths</span></div>
+                <div class="column one-fifth"><span>1/5th</span></div>
+                <div class="column four-fifths"><span>4/5ths</span></div>
             </div>
             <div class="row">
-                <div class="column five-fifths nested"><span>five-fifths</span>
-                    <div class="eight column alpha"><span>eight alpha</span></div>
-                    <div class="four column omega"><span>four omega</span></div>
+                <div class="column five-fifths nested"><span>5/5ths</span>
+                    <div class="eight column alpha"><span>8 alpha</span></div>
+                    <div class="four column omega"><span>4 omega</span></div>
                 </div>
             </div>
 

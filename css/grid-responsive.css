@@ -1,4 +1,4 @@
-/*! grid-responsive.css | Inherits default grid | https://github.com/johnsolarz/grid-system */
+/*! grid-responsive.css | Inherits default | https://github.com/johnsolarz/grid-system */
 
 /*
  * Breakpoints:
@@ -21,6 +21,13 @@ embed,
 video {
     height: auto;
     max-width: 100%;
+}
+
+.lt-ie9 img,
+.lt-ie9 object,
+.lt-ie9 embed,
+.lt-ie9 video {
+    max-width: auto;
 }
 
 /* ==========================================================================
@@ -110,106 +117,106 @@ video {
 
 @media screen and (min-width: 768px) and (max-width: 979px) {
     .container {
-        width: 744px;
+        width: 768px;
     }
     .column {
         float: left;
         margin-left: 10px;
         margin-right: 10px;
-        width: 42px;
+        width: 44px;
     }
     .offset-one {
-        padding-left: 62px;
+        padding-left: 64px;
     }
     .two {
-        width: 104px;
+        width: 108px;
     }
     .offset-two {
-        padding-left: 124px;
+        padding-left: 128px;
     }
     .three {
-        width: 166px;
+        width: 172px;
     }
     .offset-three {
-        padding-left: 186px;
+        padding-left: 192px;
     }
     .four {
-        width: 228px;
+        width: 236px;
     }
     .offset-four {
-        padding-left: 248px;
+        padding-left: 256px;
     }
     .five {
-        width: 290px;
+        width: 300px;
     }
     .offset-five {
-        padding-left: 310px;
+        padding-left: 320px;
     }
     .six {
-        width: 352px;
+        width: 364px;
     }
     .offset-six {
-        padding-left: 372px;
+        padding-left: 384px;
     }
     .seven {
-        width: 414px;
+        width: 428px;
     }
     .offset-seven {
-        padding-left: 434px;
+        padding-left: 448px;
     }
     .eight {
-        width: 476px;
+        width: 492px;
     }
     .offset-eight {
-        padding-left: 496px;
+        padding-left: 512px;
     }
     .nine {
-        width: 538px;
+        width: 556px;
     }
     .offset-nine {
-        padding-left: 558px;
+        padding-left: 576px;
     }
     .ten {
-        width: 600px;
+        width: 620px;
     }
     .offset-ten {
-        padding-left: 620px;
+        padding-left: 640px;
     }
     .eleven {
-        width: 662px;
+        width: 684px;
     }
     .offset-eleven {
-        padding-left: 682px;
+        padding-left: 704px;
     }
     .twelve {
-        width: 724px;
+        width: 748px;
     }
     .one-fifth {
-        width: 128px;
+        width: 133px;
     }
     .offset-one-fifth {
-        padding-left: 148px;
+        padding-left: 153px;
     }
     .two-fifths {
-        width: 277px;
+        width: 287px;
     }
     .offset-two-fifths {
-        padding-left: 297px;
+        padding-left: 307px;
     }
     .three-fifths {
-        width: 426px;
+        width: 440px;
     }
     .offset-three-fifths {
-        padding-left: 446px;
+        padding-left: 460px;
     }
     .four-fifths {
-        width: 575px;
+        width: 594px;
     }
     .offset-four-fifths {
-        padding-left: 595px;
+        padding-left: 614px;
     }
     .five-fifths {
-        width: 724px;
+        width: 748px;
     }
 }
 
