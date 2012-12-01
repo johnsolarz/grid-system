@@ -1,0 +1,158 @@
+/*! grid.css | Default sixteen unit grid and IE 6-8 fallback | https://github.com/johnsolarz/grid-system */
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * Base container class
+ */
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+}
+
+/*
+ * Groups of columns
+ */
+
+.row {
+    margin-bottom: 1.5em;
+}
+
+/*
+ * Nested columns (Alpha ~ First, Omega ~ Last)
+ */
+
+.column.alpha {
+    margin-left: 0;
+}
+
+.column.omega {
+    margin-right: 0;
+}
+
+/*
+ * Contain floats
+ */
+
+.container:before,
+.container:after,
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+
+.container:after,
+.row:after {
+    clear: both;
+}
+
+.container,
+.row {
+    *zoom: 1;
+}
+
+/* =============================================================================
+   960px/Default layout and IE 6-8 fallback
+   ========================================================================== */
+
+.column {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 40px;
+}
+.offset-one {
+    padding-left: 60px;
+}
+.two {
+    width: 100px;
+}
+.offset-two {
+    padding-left: 120px;
+}
+.three {
+    width: 160px;
+}
+.offset-three {
+    padding-left: 180px;
+}
+.four {
+    width: 220px;
+}
+.offset-four {
+    padding-left: 240px;
+}
+.five {
+    width: 280px;
+}
+.offset-five {
+    padding-left: 300px;
+}
+.six {
+    width: 340px;
+}
+.offset-six {
+    padding-left: 360px;
+}
+.seven {
+    width: 400px;
+}
+.offset-seven {
+    padding-left: 420px;
+}
+.eight {
+    width: 460px;
+}
+.offset-eight {
+    padding-left: 480px;
+}
+.nine {
+    width: 520px;
+}
+.offset-nine {
+    padding-left: 540px;
+}
+.ten {
+    width: 580px;
+}
+.offset-ten {
+    padding-left: 600px;
+}
+.eleven {
+    width: 640px;
+}
+.offset-eleven {
+    padding-left: 660px;
+}
+.twelve {
+    width: 700px;
+}
+.offset-twelve {
+    padding-left: 720px;
+}
+.thirteen {
+    width: 760px;
+}
+.offset-thirteen {
+    padding-left: 780px;
+}
+.fourteen {
+    width: 820px;
+}
+.offset-fourteen {
+    padding-left: 840px;
+}
+.fifteen {
+    width: 880px;
+}
+.offset-fifteen {
+    padding-left: 900px;
+}
+.sixteen {
+    width: 940px;
+}

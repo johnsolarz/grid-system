@@ -1,14 +1,14 @@
-/*! grid-responsive.css | Inherits default | https://github.com/johnsolarz/grid-system */
+/*! grid-responsive.css | Inherits default grid | https://github.com/johnsolarz/grid-system */
 
 /*
  * Breakpoints:
  *
  *    320px  / Mobile portrait to landscape               - Single column @ 300
  *    480px  / Mobile landscape to tablet portrait        - Single column @ 460
- *    768px  / Tablet portrait to landscape and desktop   - Twelve columns @ 44
- *    980px  / Default tablet and desktop in grid.css     - Twelve columns @ 60
- *    1200px / Large desktop to widescreen                - Twelve columns @ 80
- *    1920px / Widescreen HD and up                       - Twelve columns @ 140
+ *    768px  / Tablet portrait to landscape and desktop   - Sixteen columns @ 28
+ *    980px  / Default tablet and desktop in grid.css     - Sixteen columns @ 40
+ *    1200px / Large desktop to widescreen                - Sixteen columns @ 55
+ *    1920px / Widescreen HD and up                       - Sixteen columns @ 90
  */
 
 /* ==========================================================================
@@ -76,7 +76,7 @@ video {
 }
 
 /* ==========================================================================
-   Mobile all
+   Mobile
    ========================================================================== */
 
 @media screen and (max-width: 767px) {
@@ -92,27 +92,27 @@ video {
 }
 
 /* ==========================================================================
-   320px/Mobile portrait to landscape
+   320px/Mobile portrait
    ========================================================================== */
 
 @media screen and (max-width: 479px) {
     .container {
-        width: 300px;
+        width: auto;
     }
 }
 
 /* ==========================================================================
-   480px/Mobile landscape to tablet portrait
+   480px/Mobile landscape
    ========================================================================== */
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
     .container {
-        width: 460px;
+        width: auto;
     }
 }
 
 /* ==========================================================================
-   768px/Tablet portrait to landscape and desktop
+   768px/Tablet portrait
    ========================================================================== */
 
 @media screen and (min-width: 768px) and (max-width: 979px) {
@@ -123,105 +123,102 @@ video {
         float: left;
         margin-left: 10px;
         margin-right: 10px;
-        width: 44px;
+        width: 28px;
     }
     .offset-one {
-        padding-left: 64px;
+        padding-left: 48px;
     }
     .two {
-        width: 108px;
+        width: 76px;
     }
     .offset-two {
-        padding-left: 128px;
+        padding-left: 96px;
     }
     .three {
-        width: 172px;
+        width: 124px;
     }
     .offset-three {
-        padding-left: 192px;
+        padding-left: 144px;
     }
     .four {
-        width: 236px;
+        width: 172px;
     }
     .offset-four {
-        padding-left: 256px;
+        padding-left: 192px;
     }
     .five {
-        width: 300px;
+        width: 220px;
     }
     .offset-five {
-        padding-left: 320px;
+        padding-left: 240px;
     }
     .six {
-        width: 364px;
+        width: 268px;
     }
     .offset-six {
-        padding-left: 384px;
+        padding-left: 288px;
     }
     .seven {
-        width: 428px;
+        width: 316px;
     }
     .offset-seven {
-        padding-left: 448px;
+        padding-left: 336px;
     }
     .eight {
-        width: 492px;
+        width: 364px;
     }
     .offset-eight {
-        padding-left: 512px;
+        padding-left: 384px;
     }
     .nine {
-        width: 556px;
+        width: 412px;
     }
     .offset-nine {
-        padding-left: 576px;
+        padding-left: 432px;
     }
     .ten {
-        width: 620px;
+        width: 460px;
     }
     .offset-ten {
-        padding-left: 640px;
+        padding-left: 480px;
     }
     .eleven {
-        width: 684px;
+        width: 508px;
     }
     .offset-eleven {
-        padding-left: 704px;
+        padding-left: 528px;
     }
     .twelve {
-        width: 748px;
+        width: 556px;
     }
-    .one-fifth {
-        width: 133px;
+    .offset-twelve {
+        width: 576px;
     }
-    .offset-one-fifth {
-        padding-left: 153px;
+    .thirteen {
+        width: 604px;
     }
-    .two-fifths {
-        width: 287px;
+    .offset-thirteen {
+        width: 624px;
     }
-    .offset-two-fifths {
-        padding-left: 307px;
+    .fourteen {
+        width: 652px;
     }
-    .three-fifths {
-        width: 440px;
+    .offset-fourteen {
+        width: 672px;
     }
-    .offset-three-fifths {
-        padding-left: 460px;
+    .fifteen {
+        width: 700px;
     }
-    .four-fifths {
-        width: 594px;
+    .offset-fifteen {
+        width: 720px;
     }
-    .offset-four-fifths {
-        padding-left: 614px;
-    }
-    .five-fifths {
+    .sixteen {
         width: 748px;
     }
 }
 
 /* ==========================================================================
-   1200px/Large desktop to widescreen
+   1200px/Desktop
    ========================================================================== */
 
 @media screen and (min-width: 1200px) {
@@ -231,130 +228,126 @@ video {
     }
     .hd .column,
     .dt .column {
-        width: 80px;
+        width: 55px;
     }
     .hd .offset-one,
     .dt .offset-one {
-        padding-left: 100px;
+        padding-left: 75px;
     }
     .hd .two,
     .dt .two {
-        width: 180px;
+        width: 130px;
     }
     .hd .offset-two,
     .dt .offset-two {
-        padding-left: 200px;
+        padding-left: 150px;
     }
     .hd .three,
     .dt .three {
-        width: 280px;
+        width: 205px;
     }
     .hd .offset-three,
     .dt .offset-three {
-        padding-left: 300px;
+        padding-left: 225px;
     }
     .hd .four,
     .dt .four {
-        width: 380px;
+        width: 280px;
     }
     .hd .offset-four,
     .dt .offset-four {
-        padding-left: 400px;
+        padding-left: 300px;
     }
     .hd .five,
     .dt .five {
-        width: 480px;
+        width: 355px;
     }
     .hd .offset-five,
     .dt .offset-five {
-        padding-left: 500px;
+        padding-left: 375px;
     }
     .hd .six,
     .dt .six {
-        width: 580px;
+        width: 430px;
     }
     .hd .offset-six,
     .dt .offset-six {
-        padding-left: 600px;
+        padding-left: 450px;
     }
     .hd .seven,
     .dt .seven {
-        width: 680px;
+        width: 505px;
     }
     .hd .offset-seven,
     .dt .offset-seven {
-        padding-left: 700px;
+        padding-left: 525px;
     }
     .hd .eight,
     .dt .eight {
-        width: 780px;
+        width: 580px;
     }
     .hd .offset-eight,
     .dt .offset-eight {
-        padding-left: 800px;
+        padding-left: 600px;
     }
     .hd .nine,
     .dt .nine {
-        width: 880px;
+        width: 655px;
     }
     .hd .offset-nine,
     .dt .offset-nine {
-        padding-left: 900px;
+        padding-left: 675px;
     }
     .hd .ten,
     .dt .ten {
-        width: 980px;
+        width: 730px;
     }
     .hd .offset-ten,
     .dt .offset-ten {
-        padding-left: 1000px;
+        padding-left: 750px;
     }
     .hd .eleven,
     .dt .eleven {
-        width: 1080px;
+        width: 805px;
     }
     .hd .offset-eleven,
     .dt .offset-eleven {
-        padding-left: 1100px;
+        padding-left: 825px;
     }
     .hd .twelve,
     .dt .twelve {
-        width: 1180px;
+        width: 880px;
     }
-    .hd .one-fifth,
-    .dt .one-fifth {
-        width: 220px;
+    .hd .offset-twelve,
+    .dt .offset-twelve {
+        padding-left: 900px;
     }
-    .hd .offset-one-fifth,
-    .dt .offset-one-fifth {
-        padding-left: 240px;
+    .hd .thirteen,
+    .dt .thirteen {
+        width: 955px;
     }
-    .hd .two-fifths,
-    .dt .two-fifths {
-        width: 460px;
+    .hd .offset-thirteen,
+    .dt .offset-thirteen {
+        padding-left: 975px;
     }
-    .hd .offset-two-fifths,
-    .dt .offset-two-fifths {
-        padding-left: 480px;
+    .hd .fourteen,
+    .dt .fourteen {
+        width: 1030px;
     }
-    .hd .three-fifths,
-    .dt .three-fifths {
-        width: 700px;
+    .hd .offset-fourteen,
+    .dt .offset-fourteen {
+        padding-left: 1050px;
     }
-    .hd .offset-three-fifths,
-    .dt .offset-three-fifths {
-        padding-left: 720px;
+    .hd .fifteen,
+    .dt .fifteen {
+        width: 1105px;
     }
-    .hd .four-fifths,
-    .dt .four-fifths {
-        width: 940px;
+    .hd .offset-fifteen,
+    .dt .offset-fifteen {
+        padding-left: 1125px;
     }
-    .hd .offset-four-fifths,
-    .dt .offset-four-fifths {
-        padding-left: 960px;
-    }
-    .hd .five-fifths,
-    .dt .five-fifths {
+    .hd .sixteen,
+    .dt .sixteen {
         width: 1180px;
     }
 }
@@ -370,7 +363,7 @@ video {
     .hd .column {
         margin-left: 15px;
         margin-right: 15px;
-        width: 130px;
+        width: 90px;
     }
     .hd .column.alpha {
         margin-left: 0;
@@ -379,96 +372,93 @@ video {
         margin-right: 0;
     }
     .hd .offset-one {
-        padding-left: 160px;
+        padding-left: 120px;
     }
     .hd .two {
-        width: 290px;
+        width: 210px;
     }
     .hd .offset-two {
-        padding-left: 320px;
+        padding-left: 240px;
     }
     .hd .three {
-        width: 450px;
+        width: 430px;
     }
     .hd .offset-three {
-        padding-left: 480px;
+        padding-left: 360px;
     }
     .hd .four {
-        width: 610px;
+        width: 450px;
     }
     .hd .offset-four {
-        padding-left: 640px;
+        padding-left: 480px;
     }
     .hd .five {
-        width: 770px;
+        width: 570px;
     }
     .hd .offset-five {
-        padding-left: 800px;
+        padding-left: 600px;
     }
     .hd .six {
-        width: 930px;
+        width: 690px;
     }
     .hd .offset-six {
-        padding-left: 960px;
+        padding-left: 720px;
     }
     .hd .seven {
-        width: 1090px;
+        width: 810px;
     }
     .hd .offset-seven {
-        padding-left: 1120px;
+        padding-left: 840px;
     }
     .hd .eight {
-        width: 1250px;
+        width: 930px;
     }
     .hd .offset-eight {
-        padding-left: 1280px;
+        padding-left: 960px;
     }
     .hd .nine {
-        width: 1410px;
+        width: 1050px;
     }
     .hd .offset-nine {
-        padding-left: 1440px;
+        padding-left: 1080px;
     }
     .hd .ten {
-        width: 1570px;
+        width: 1170px;
     }
     .hd .offset-ten {
-        padding-left: 1600px;
+        padding-left: 1200px;
     }
     .hd .eleven {
-        width: 1730px;
+        width: 1290px;
     }
     .hd .offset-eleven {
-        padding-left: 1760px;
+        padding-left: 1320px;
     }
     .hd .twelve {
-        width: 1890px;
+        width: 1410px;
     }
-    .hd .one-fifth {
-        width: 354px;
+    .hd .offset-twelve {
+        padding-left: 1440px;
     }
-    .hd .offset-one-fifth {
-        padding-left: 384px;
+    .hd .thirteen {
+        width: 1530px;
     }
-    .hd .two-fifths {
-        width: 738px;
+    .hd .offset-thirteen {
+        padding-left: 1560px;
     }
-    .hd .offset-two-fifths {
-        padding-left: 768px;
+    .hd .fourteen {
+        width: 1650px;
     }
-    .hd .three-fifths {
-        width: 1122px;
+    .hd .offset-fourteen {
+        padding-left: 1680px;
     }
-    .hd .offset-three-fifths {
-        padding-left: 1152px;
+    .hd .fifteen {
+        width: 1770px;
     }
-    .hd .four-fifths {
-        width: 1506px;
+    .hd .offset-fifteen {
+        padding-left: 1800px;
     }
-    .hd .offset-four-fifths {
-        padding-left: 1536px;
-    }
-    .hd .five-fifths {
+    .hd .sixteen {
         width: 1890px;
     }
 }
