@@ -1,14 +1,14 @@
-/*! grid-responsive.css | Inherits default grid | https://github.com/johnsolarz/grid-system */
+/*! grid-responsive.css | Inherits default | https://github.com/johnsolarz/grid-system */
 
 /*
  * Breakpoints:
  *
- *    320px  / Mobile portrait to landscape               - Single column @ 300
- *    480px  / Mobile landscape to tablet portrait        - Single column @ 460
- *    768px  / Tablet portrait to landscape and desktop   - Sixteen columns @ 28
- *    980px  / Default tablet and desktop in grid.css     - Sixteen columns @ 40
- *    1200px / Large desktop to widescreen                - Sixteen columns @ 55
- *    1920px / Widescreen HD and up                       - Sixteen columns @ 90
+ *    300px  | Mobile portrait   - Single column   @ 300px
+ *    480px  | Mobile landscape  - Single column   @ 460px
+ *    768px  | Tablet portrait   - Sixteen columns @ 28px, 20px gutters
+ *    980px  | Default grid.css  - Sixteen columns @ 40px, 20px gutters
+ *    1200px | Large desktop     - Sixteen columns @ 55px, 20px gutters
+ *    1920px | Widescreen HD     - Sixteen columns @ 90px, 30px gutters
  */
 
 /* ==========================================================================
@@ -76,10 +76,13 @@ video {
 }
 
 /* ==========================================================================
-   Mobile
+   Mobile All
    ========================================================================== */
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
+    .container {
+        width: 300px;
+    }
     .column {
         float: none;
         margin-left: 0;
@@ -92,22 +95,12 @@ video {
 }
 
 /* ==========================================================================
-   320px/Mobile portrait
+   480px/Mobile portrait
    ========================================================================== */
 
-@media screen and (max-width: 479px) {
+ @media (min-width: 480px) and (max-width: 767px) {
     .container {
-        width: auto;
-    }
-}
-
-/* ==========================================================================
-   480px/Mobile landscape
-   ========================================================================== */
-
-@media screen and (min-width: 480px) and (max-width: 767px) {
-    .container {
-        width: auto;
+        width: 460px;
     }
 }
 
@@ -115,7 +108,7 @@ video {
    768px/Tablet portrait
    ========================================================================== */
 
-@media screen and (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 979px) {
     .container {
         width: 768px;
     }
@@ -221,7 +214,7 @@ video {
    1200px/Desktop
    ========================================================================== */
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
     .hd,
     .dt {
         width: 1200px;
@@ -356,7 +349,7 @@ video {
    1920px/Widescreen HD and up
    ========================================================================== */
 
-@media screen and (min-width: 1920px) {
+@media (min-width: 1920px) {
     .hd {
         width: 1920px;
     }

@@ -6,9 +6,9 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Responsive css layout</title>
-    <meta name="description" content="Responsive grid system">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Grid System</title>
+    <meta name="description" content="Grid System">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/grid-12.css">
     <link rel="stylesheet" href="css/grid-responsive-12.css">
 
@@ -34,10 +34,9 @@
             font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
         }
-        div.header{
+        header,
+        section {
             display: block;
-            margin-bottom: 3em;
-            margin-top: 1.5em;
         }
 
         #main .row {
@@ -74,20 +73,16 @@
             }
         }
     </style>
-
     </head>
-
-    <body class="demo">
-        <div role="banner" class="header container hd">
+    <body>
+        <header class="header container hd" role="banner" >
             <div class="twelve column">
-                <h1>Grid System<sup>12</sup></h1>
+                <h1>Grid<sup>12</sup></h1>
                 &mdash;
-                <p>Fixed-width + responsive grid, mobile-first ready with an IE 6-8 fallback.</p>
+                <p>Fixed-width + responsive grid system. Mobile-first ready with an IE 6-8 fallback.</p>
             </div>
-        </div>
-
-        <div class="container hd" id="main">
-
+        </header>
+        <section class="container hd" id="main">
             <div class="row">
                 <div class="column"><span>1</span></div>
                 <div class="column"><span>1</span></div>
@@ -102,7 +97,6 @@
                 <div class="column"><span>1</span></div>
                 <div class="column"><span>1</span></div>
             </div>
-
             <div class="row">
                 <div class="two column"><span>2</span></div>
                 <div class="two column"><span>2</span></div>
@@ -111,66 +105,54 @@
                 <div class="two column"><span>2</span></div>
                 <div class="two column"><span>2</span></div>
             </div>
-
             <div class="row">
                 <div class="column three"><span>3</span></div>
                 <div class="column three"><span>3</span></div>
                 <div class="column three"><span>3</span></div>
                 <div class="column three"><span>3</span></div>
             </div>
-
             <div class="row">
                 <div class="column four"><span>4</span></div>
                 <div class="column four"><span>4</span></div>
                 <div class="column four"><span>4</span></div>
             </div>
-
             <div class="row">
                 <div class="column five"><span>5</span></div>
                 <div class="column seven"><span>7</span></div>
             </div>
-
             <div class="row">
                 <div class="column six"><span>6</span></div>
                 <div class="column six"><span>6</span></div>
             </div>
-
             <div class="row">
                 <div class="column seven"><span>7</span></div>
                 <div class="column five"><span>5</span></div>
             </div>
-
             <div class="row">
                 <div class="column eight"><span>8</span></div>
                 <div class="column four"><span>4</span></div>
             </div>
-
             <div class="row">
                 <div class="column nine"><span>9</span></div>
                 <div class="column three"><span>3</span></div>
             </div>
-
             <div class="row">
                 <div class="column ten"><span>10</span></div>
                 <div class="two column"><span>2</span></div>
             </div>
-
             <div class="row">
                 <div class="column eleven"><span>11</span></div>
                 <div class="column"><span>1</span></div>
             </div>
-
             <div class="row">
                 <div class="two column offset-one"><span>2 offset-1</span></div>
                 <div class="column eight"><span>8</span></div>
             </div>
-
             <div class="row">
                 <div class="two column"><span>2</span></div>
                 <div class="column eight"><span>8</span></div>
                 <div class="two column"><span>2</span></div>
             </div>
-
             <div class="row">
                 <div class="column one-fifth"><span>1/5th</span></div>
                 <div class="column one-fifth"><span>1/5th</span></div>
@@ -196,13 +178,6 @@
                     <div class="four column omega"><span>4 omega</span></div>
                 </div>
             </div>
-
-        </div><!-- end #main -->
-
-         <!--[if !IE]>
-          <!-- Fix for the iOS viewport scaling bug. https://gist.github.com/901295 -->
-          <script src="js/ios-viewport-scaling-bug-fix.js"></script>
-         <!--<![endif]-->
-
+        </section><!-- end #main -->
     </body>
 </html>

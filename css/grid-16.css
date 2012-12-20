@@ -29,7 +29,6 @@
 .column.alpha {
     margin-left: 0;
 }
-
 .column.omega {
     margin-right: 0;
 }
@@ -45,12 +44,10 @@
     content: " ";
     display: table;
 }
-
 .container:after,
 .row:after {
     clear: both;
 }
-
 .container,
 .row {
     *zoom: 1;
