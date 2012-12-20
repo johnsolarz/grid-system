@@ -22,7 +22,11 @@ video {
     height: auto;
     max-width: 100%;
 }
-/* IE 8 fix */
+
+/*
+ * IE 8 fix
+ */
+
 .lt-ie9 img,
 .lt-ie9 object,
 .lt-ie9 embed,
@@ -98,7 +102,7 @@ video {
    480px/Mobile landscape
    ========================================================================== */
 
- @media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
     .container {
         width: 460px;
     }
