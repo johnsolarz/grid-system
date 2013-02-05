@@ -9,7 +9,6 @@
     <title>Grid System</title>
     <meta name="description" content="Grid System">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/12/grid.css">
     <link rel="stylesheet" href="css/12/grid-responsive.css">
 
     <style type="text/css">
@@ -40,8 +39,7 @@
         }
 
         #main .row {
-            background: #ddd;
-            border-radius: 5px;
+            margin-bottom: 20px;
         }
         #main .row .column span {
             border-radius: 5px;
@@ -58,29 +56,20 @@
             margin-bottom: 1.5em;
         }
         @media screen and (max-width:768px) {
+            #main .row {
+                margin-bottom: 0;
+            }
             #main .row .column span {
-                border-radius: 5px;
-                margin-bottom: .5em;
-            }
-            #main .row .column:last-child span {
-                margin-bottom: 0;
-            }
-            #main .row .column.nested span {
-                margin-bottom: .5em;
-            }
-            #main .row .column.nested .omega span {
-                margin-bottom: 0;
+                margin-bottom: 20px;
             }
         }
     </style>
     </head>
     <body>
         <header class="header container hd" role="banner" >
-            <div class="twelve column">
-                <h1>Grid<sup>12</sup></h1>
-                &mdash;
-                <p>Fixed-width + responsive grid system. Mobile-first ready with an IE 6-8 fallback.</p>
-            </div>
+            <h1>Grid<sup>12</sup></h1>
+            &mdash;
+            <p>Fixed-width + responsive grid system with IE 6-8 fallback.</p>
         </header>
         <section class="container hd" id="main">
             <div class="row">
@@ -174,8 +163,10 @@
             </div>
             <div class="row">
                 <div class="column five-fifths nested"><span>5/5ths</span>
-                    <div class="eight column alpha"><span>8 alpha</span></div>
-                    <div class="four column omega"><span>4 omega</span></div>
+                    <div class="row">
+                        <div class="eight column"><span>8 alpha</span></div>
+                        <div class="four column"><span>4 omega</span></div>
+                    </div>
                 </div>
             </div>
         </section><!-- end #main -->

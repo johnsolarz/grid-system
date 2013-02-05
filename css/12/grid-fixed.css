@@ -1,0 +1,142 @@
+/*!
+ * grid-fixed.css
+ * Fixed-width grid system
+ * https://github.com/johnsolarz/grid
+ */
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.container {
+  margin: 0 auto;
+  *zoom: 1;
+}
+.container:before,
+.container:after {
+  display: table;
+  content: "";
+}
+.container:after {
+  clear: both;
+}
+.row {
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+}
+.row:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   960px/Default grid, IE 6-8 fallback
+   ========================================================================== */
+
+.container {
+  width: 940px;
+}
+.row {
+  margin-left: -20px;
+}
+.column {
+  float: left;
+  margin-left: 20px;
+  width: 60px;
+}
+.offset-one {
+  padding-left: 80px;
+}
+.two {
+  width: 140px;
+}
+.offset-two {
+  padding-left: 160px;
+}
+.three {
+  width: 220px;
+}
+.offset-three {
+  padding-left: 240px;
+}
+.four {
+  width: 300px;
+}
+.offset-four {
+  padding-left: 320px;
+}
+.five {
+  width: 380px;
+}
+.offset-five {
+  padding-left: 400px;
+}
+.six {
+  width: 460px;
+}
+.offset-six {
+  padding-left: 480px;
+}
+.seven {
+  width: 540px;
+}
+.offset-seven {
+  padding-left: 560px;
+}
+.eight {
+  width: 620px;
+}
+.offset-eight {
+  padding-left: 640px;
+}
+.nine {
+  width: 700px;
+}
+.offset-nine {
+  padding-left: 720px;
+}
+.ten {
+  width: 780px;
+}
+.offset-ten {
+  padding-left: 800px;
+}
+.eleven {
+  width: 860px;
+}
+.offset-eleven {
+  padding-left: 880px;
+}
+.twelve {
+  width: 940px;
+}
+.one-fifth {
+  width: 172px;
+}
+.offset-one-fifth {
+  padding-left: 192px;
+}
+.two-fifths {
+  width: 364px;
+}
+.offset-two-fifths {
+  padding-left: 384px;
+}
+.three-fifths {
+  width: 556px;
+}
+.offset-three-fifths {
+  padding-left: 576px;
+}
+.four-fifths {
+  width: 748px;
+}
+.offset-four-fifths {
+  padding-left: 768px;
+}
+.five-fifths {
+  width: 940px;
+}
